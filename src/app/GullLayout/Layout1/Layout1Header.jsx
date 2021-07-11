@@ -28,12 +28,7 @@ class Layout1Header extends Component {
       {
         icon: "i-Library",
         link: "#",
-        text: "Ui Kits"
-      },
-      {
-        icon: "i-Drop",
-        link: "#",
-        text: "Apps"
+        text: "Dashboard"
       },
       {
         icon: "i-File-Clipboard-File--Text",
@@ -56,33 +51,33 @@ class Layout1Header extends Component {
         icon: "i-Speach-Bubble-6",
         title: "New message",
         description: "James: Hey! are you busy?",
-        time: "2019-10-30T02:10:18.931Z",
+        time: "2021-07-11T02:10:18.931Z",
         color: "primary",
         status: "New"
       },
       {
         icon: "i-Receipt-3",
-        title: "New order received",
-        description: "1 Headphone, 3 iPhone",
-        time: "2019-03-10T02:10:18.931Z",
+        title: "New Image(s) Uploaded",
+        description: "Task Name ",
+        time: "2021-07-11T02:10:18.931Z",
         color: "success",
-        status: "New"
+        status: "3"
       },
       {
         icon: "i-Empty-Box",
-        title: "Product out of stock",
-        description: "1 Headphone, 3 iPhone",
-        time: "2019-05-10T02:10:18.931Z",
+        title: "New Task Created",
+        description: "Task Description",
+        time: "2021-07-11T02:10:18.931Z",
         color: "danger",
-        status: "3"
+        status: "New"
       },
       {
         icon: "i-Data-Power",
-        title: "Server up!",
-        description: "Server rebooted successfully",
-        time: "2019-03-10T02:10:18.931Z",
+        title: "New Image(s) Uploaded",
+        description: "Job Name ",
+        time: "2021-07-11T02:10:18.931Z",
         color: "success",
-        status: "3"
+        status: "5"
       }
     ],
     showSearchBox: false
