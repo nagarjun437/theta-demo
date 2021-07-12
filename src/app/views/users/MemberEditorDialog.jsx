@@ -15,8 +15,6 @@ class MemberEditorDialog extends Component {
     name: "",
     email: "",
     phone: "",
-    balance: "",
-    age: "",
     company: "",
     address: "",
     isActive: false
@@ -61,8 +59,6 @@ class MemberEditorDialog extends Component {
       name,
       email,
       phone,
-      balance,
-      age,
       company,
       address,
       isActive
@@ -108,29 +104,11 @@ class MemberEditorDialog extends Component {
                   errorMessages={["this field is required"]}
                 />
 
-                <TextValidator
-                  className="w-100 mb-16"
-                  label="Balance"
-                  onChange={this.handleChange}
-                  type="number"
-                  name="balance"
-                  value={balance}
-                  validators={["required"]}
-                  errorMessages={["this field is required"]}
-                />
+
               </Grid>
 
               <Grid item sm={6} xs={12}>
-                <TextValidator
-                  className="w-100 mb-16"
-                  label="Age"
-                  onChange={this.handleChange}
-                  type="number"
-                  name="age"
-                  value={age}
-                  validators={["required"]}
-                  errorMessages={["this field is required"]}
-                />
+
                 <TextValidator
                   className="w-100 mb-16"
                   label="Company"

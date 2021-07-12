@@ -37,10 +37,7 @@ class SimpleAlert extends Component {
             dismissible
             onClose={this.closeCustomAlert}
           >
-            Gull makes developent life easier!
-            <Button variant="warning" className="btn-rounded ml-3">
-              Buy Now
-            </Button>
+            Theta App makes project management easier!
           </Alert>
         )}
         {variantList.map((variant, idx) => (

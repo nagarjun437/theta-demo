@@ -32,7 +32,7 @@ class Checkout extends Component {
               <div className="card">
                 <div className="card-body">
                   <div className="card-title">Product Cart</div>
-                  <span className="text-muted">Gull Modern Cart</span>
+                  <span className="text-muted">Modern Cart</span>
 
                   <div className="table-responsive">
                     <table className="table">

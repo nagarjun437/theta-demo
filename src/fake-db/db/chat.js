@@ -119,43 +119,38 @@ const ChatDB = {
       chats: [
         {
           contactId: "323sa680b3249760ea21rt47",
-          text: "Do you ever find yourself falling into the “discount trap?”",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "Hi, how are you?",
+          time: "2021-07-11T08:45:28.291Z"
         },
         {
           contactId: "7863a6802ez0e277a0f98534",
-          text: "Giving away your knowledge or product just to gain clients?",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "Hi, I am good tnx how about you?",
+          time: "2021-07-11T08:45:28.291Z"
         },
         {
           contactId: "323sa680b3249760ea21rt47",
-          text: "Yes",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "I am good too, thank you for your chat template",
+          time: "2021-07-11T08:45:28.291Z"
         },
         {
           contactId: "7863a6802ez0e277a0f98534",
-          text: "Don’t feel bad. It happens to a lot of us",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "You are welcome",
+          time: "2021-07-11T08:45:28.291Z"
         },
         {
           contactId: "323sa680b3249760ea21rt47",
-          text: "Do you ever find yourself falling into the “discount trap?”",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "I am looking for your next templates",
+          time: "2021-07-11T08:45:28.291Z"
         },
         {
           contactId: "7863a6802ez0e277a0f98534",
-          text: "Giving away your knowledge or product just to gain clients?",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "Ok, thank you have a good day",
+          time: "2021-07-11T08:45:28.291Z"
         },
         {
           contactId: "323sa680b3249760ea21rt47",
-          text: "Yes",
-          time: "2018-02-10T08:45:28.291Z"
-        },
-        {
-          contactId: "7863a6802ez0e277a0f98534",
-          text: "Don’t feel bad. It happens to a lot of us",
-          time: "2018-02-10T08:45:28.291Z"
+          text: "Ok, thank you have a good day",
+          time: "2021-07-11T08:45:28.291Z"
         }
       ]
     },
@@ -163,24 +158,24 @@ const ChatDB = {
       id: "3289564a680b2134760ea21fe7753",
       chats: [
         {
-          contactId: "14663a3406eb47ffa63d4fec9429cb71",
-          text: "Do you ever find yourself falling into the “discount trap?”",
-          time: "2019-03-10T08:45:28.291Z"
+          contactId: "323sa680b3249760ea21rt47",
+          text: "Hi, how are you?",
+          time: "2021-07-10T08:45:28.291Z"
         },
         {
           contactId: "7863a6802ez0e277a0f98534",
-          text: "Giving away your knowledge or product just to gain clients?",
-          time: "2019-03-10T08:45:28.291Z"
+          text: "Hi, I am good tnx how about you?",
+          time: "2021-07-10T08:45:28.291Z"
         },
         {
-          contactId: "14663a3406eb47ffa63d4fec9429cb71",
-          text: "Yes",
-          time: "2019-03-10T08:45:28.291Z"
+          contactId: "323sa680b3249760ea21rt47",
+          text: "I am good too, thank you for your chat template",
+          time: "2021-07-10T08:45:28.291Z"
         },
         {
           contactId: "7863a6802ez0e277a0f98534",
-          text: "Don’t feel bad. It happens to a lot of us",
-          time: "2019-03-10T08:45:28.291Z"
+          text: "You are welcome",
+          time: "2021-07-10T08:45:28.291Z"
         }
       ]
     }

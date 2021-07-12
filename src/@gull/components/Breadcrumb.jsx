@@ -30,7 +30,7 @@ const Breadcrumb = ({ routeSegments }) => {
             : null}
         </ul>
       </div>
-      <div className="separator-breadcrumb border-top"></div>
+      {/*<div className="separator-breadcrumb border-top"></div>*/}
     </Fragment>
   );
 };

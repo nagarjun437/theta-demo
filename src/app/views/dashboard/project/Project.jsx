@@ -93,7 +93,7 @@ class Project extends Component {
         ></Breadcrumb>
 
         <div className="row mb-4">
-          <div className="col-xl-10">
+          <div className="col-xl-9">
             <div className="navbar navbar-expand-lg navbar-light navbar-component rounded">
               <div className="text-center d-lg-none w-100">
                 <button

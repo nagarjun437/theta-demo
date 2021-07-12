@@ -80,17 +80,17 @@ class ContactList extends Component {
 
   getBadgeColor = role => {
     switch (role) {
-      case "developer":
+      case "Admin":
         return "primary";
 
-      case "manager":
+      case "Project Admin":
         return "success";
 
-      case "designer":
+      case "User":
         return "warning";
 
       default:
-        return "primary";
+        return "warning";
     }
   };
 
@@ -181,9 +181,7 @@ class ContactList extends Component {
                           <th>Email</th>
                           <th>Phone</th>
                           <th>Role</th>
-                          <th>Age</th>
                           <th>Joining Date</th>
-                          <th>Salary</th>
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -212,10 +210,9 @@ class ContactList extends Component {
                                     user.role
                                   )} p-2 text-capitalize`}
                                 >
-                                  {user.role ? user.role : "Developer"}
+                                  {user.role ? user.role : "User"}
                                 </div>
                               </td>
-                              <td>{user.age}</td>
                               <td>
                                 {format(
                                   new Date(
@@ -224,7 +221,6 @@ class ContactList extends Component {
                                   "dd MMM, yyyy"
                                 )}
                               </td>
-                              <td>${user.balance}</td>
                               <td>
                                 <div className="d-flex">
                                   <div className="cursor-pointer mr-3">

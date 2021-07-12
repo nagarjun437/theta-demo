@@ -299,7 +299,7 @@ class Tasks extends Component {
 
                                     </Dropdown.Item>
                                     <Dropdown.Item>
-                                      <i className="i-Edit"> </i> Edit Task Details
+                                      <Link to="/tasks/edit"> <i className="i-Edit"> </i> Edit Task Details</Link>
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
                                 </Dropdown>

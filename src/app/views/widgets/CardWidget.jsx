@@ -26,7 +26,7 @@ class CardWidget extends Component {
                 alt="First slide"
               />
               <div className="card-body">
-                <h5 className="card-title mb-2">Gull Admin</h5>
+                <h5 className="card-title mb-2">Admin</h5>
                 <p className="card-text text-mute">By Frontend developer</p>
                 <button
                   type="button"
@@ -53,7 +53,7 @@ class CardWidget extends Component {
                   src="/assets/images/products/headphone-1.jpg"
                   alt="Second slide"
                 />
-                <h5 className="card-title mt-4 mb-2">Gull Admin</h5>
+                <h5 className="card-title mt-4 mb-2">Admin</h5>
                 <p className="card-text text-mute">By Frontend developer</p>
 
                 <div className="ul-widget-card__info">
@@ -78,7 +78,7 @@ class CardWidget extends Component {
                   src="/assets/images/products/iphone-1.jpg"
                   alt="First slide"
                 />
-                <h5 className="card-title mt-4 mb-2">Gull Admin</h5>
+                <h5 className="card-title mt-4 mb-2">Admin</h5>
 
                 <div className="ul-widget-card__progress-rate">
                   <span>$675</span>
@@ -321,7 +321,7 @@ class CardWidget extends Component {
             </div>
           </div>
           <div className="col-lg-4 col-xl-4 mt-3">
-            <SimpleCard title="Gull Admin" subtitle="By Frontend developer">
+            <SimpleCard title="Admin" subtitle="By Frontend developer">
               <img
                 className="d-block w-100 rounded"
                 src="/assets/images/products/headphone-1.jpg"

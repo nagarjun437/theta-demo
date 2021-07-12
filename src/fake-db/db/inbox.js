@@ -9,9 +9,9 @@ const inboxDB = {
         name: "Henrik Gevorg",
         photo: "/assets/images/faces/1.jpg"
       },
-      date: new Date("1/25/2018"),
+      date: new Date("6/25/2021"),
       selected: false,
-      subject: "Welcome to Angular Gull",
+      subject: "Welcome to Theta App",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -34,7 +34,7 @@ const inboxDB = {
         name: "Gevorg Spartak",
         photo: "/assets/images/faces/2.jpg"
       },
-      date: new Date("4/3/2017"),
+      date: new Date("4/3/2021"),
       selected: false,
       subject: "Confirm your email address",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
@@ -63,9 +63,9 @@ const inboxDB = {
         name: "Petros Toros",
         photo: "/assets/images/faces/3.jpg"
       },
-      date: new Date("1/20/2017"),
+      date: new Date("1/20/2021"),
       selected: false,
-      subject: "New order informations",
+      subject: "New Task Created",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -88,9 +88,9 @@ const inboxDB = {
         name: "Henrik Gevorg",
         photo: "/assets/images/faces/1.jpg"
       },
-      date: new Date("1/8/2017"),
+      date: new Date("1/8/2021"),
       selected: false,
-      subject: "Welcome to Angular Gull",
+      subject: "Welcome to Theta App",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -113,7 +113,7 @@ const inboxDB = {
         name: "Gevorg Spartak",
         photo: "/assets/images/faces/2.jpg"
       },
-      date: new Date("10/3/2016"),
+      date: new Date("10/3/2021"),
       selected: false,
       subject: "Confirm your email address",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
@@ -140,11 +140,11 @@ const inboxDB = {
       id: shortid.generate(),
       sender: {
         name: "Petros Toros",
-        photo: "/assets/images/faces/4.jpg"
+        photo: "/assets/images/faces/3.jpg"
       },
-      date: new Date("10/3/2015"),
+      date: new Date("10/3/2020"),
       selected: false,
-      subject: "New order informations",
+      subject: "Job Status Updated",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -167,9 +167,9 @@ const inboxDB = {
         name: "Henrik Gevorg",
         photo: "/assets/images/faces/1.jpg"
       },
-      date: new Date("10/3/2015"),
+      date: new Date("10/3/2020"),
       selected: false,
-      subject: "Welcome to Angular Gull",
+      subject: "Welcome to Theta App",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -192,7 +192,7 @@ const inboxDB = {
         name: "Gevorg Spartak",
         photo: "/assets/images/faces/2.jpg"
       },
-      date: new Date("10/3/2015"),
+      date: new Date("10/3/2020"),
       selected: false,
       subject: "Confirm your email address",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
@@ -219,11 +219,11 @@ const inboxDB = {
       id: shortid.generate(),
       sender: {
         name: "Petros Toros",
-        photo: "/assets/images/faces/4.jpg"
+        photo: "/assets/images/faces/3.jpg"
       },
-      date: new Date("10/3/2015"),
+      date: new Date("10/3/2020"),
       selected: false,
-      subject: "New order informations",
+      subject: "New Project has been Created",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -246,7 +246,7 @@ const inboxDB = {
         name: "Gevorg Spartak",
         photo: "/assets/images/faces/2.jpg"
       },
-      date: new Date("10/3/2015"),
+      date: new Date("10/3/2020"),
       selected: false,
       subject: "Confirm your email address",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
@@ -273,11 +273,11 @@ const inboxDB = {
       id: shortid.generate(),
       sender: {
         name: "Petros Toros",
-        photo: "/assets/images/faces/4.jpg"
+        photo: "/assets/images/faces/3.jpg"
       },
-      date: new Date("10/3/2015"),
+      date: new Date("10/3/2020"),
       selected: false,
-      subject: "New order informations",
+      subject: "Job has been Approved",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -300,7 +300,7 @@ const inboxDB = {
         name: "Gevorg Spartak",
         photo: "/assets/images/faces/2.jpg"
       },
-      date: new Date("10/3/2012"),
+      date: new Date("10/3/2020"),
       selected: false,
       subject: "Confirm your email address",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>

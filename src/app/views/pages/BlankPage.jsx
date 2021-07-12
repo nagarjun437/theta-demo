@@ -12,7 +12,7 @@ class BlankPage extends Component {
   state = {
     openItem: "",
     questionList: [
-      "Where can I buy Gull React from?",
+      "Where can I buy Templete React from?",
       "Do I have right to use it in another template?",
       "What are the benefits that will be provided?",
       "How long shall I get support?"

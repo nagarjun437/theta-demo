@@ -50,7 +50,7 @@ class AppWidget extends Component {
                         <small className="text-mute">Designer</small>
                       </td>
                       <td>
-                        <span className="text-small">Gull Admin</span>
+                        <span className="text-small">Admin</span>
                       </td>
                       <td>
                         <span>$4.9K</span>

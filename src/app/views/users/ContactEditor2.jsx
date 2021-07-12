@@ -45,7 +45,7 @@ const ContactEditor2 = ({
                   age: "",
                   balance: "",
                   bd: new Date(),
-                  role: "developer"
+                  role: "Admin"
                 }
           }
           validationSchema={contactSchema}
@@ -159,16 +159,16 @@ const ContactEditor2 = ({
                         className="form-check-input"
                         type="radio"
                         name="role"
-                        value="developer"
+                        value="Admin"
                         onChange={handleChange}
-                        checked={"developer".match(values.role)}
-                        id="developer"
+                        checked={"Admin".match(values.role)}
+                        id="Admin"
                       />
                       <label
                         className="form-check-label ml-3"
-                        htmlFor="developer"
+                        htmlFor="Admin"
                       >
-                        Developer
+                        Admin
                       </label>
                     </div>
                     <div className="form-check">
@@ -176,16 +176,16 @@ const ContactEditor2 = ({
                         className="form-check-input"
                         type="radio"
                         name="role"
-                        value="designer"
+                        value="Project Admin"
                         onChange={handleChange}
-                        checked={"designer".match(values.role)}
-                        id="designer"
+                        checked={"ProjectAdmin".match(values.role)}
+                        id="ProjectAdmin"
                       />
                       <label
                         className="form-check-label ml-3"
-                        htmlFor="designer"
+                        htmlFor="Project Admin"
                       >
-                        Designer
+                          Project Admin
                       </label>
                     </div>
                     <div className="form-check">
@@ -193,16 +193,16 @@ const ContactEditor2 = ({
                         className="form-check-input"
                         type="radio"
                         name="role"
-                        value="manager"
+                        value="User"
                         onChange={handleChange}
-                        checked={"manager".match(values.role)}
-                        id="manager"
+                        checked={"User".match(values.role)}
+                        id="User"
                       />
                       <label
                         className="form-check-label ml-3"
-                        htmlFor="manager"
+                        htmlFor="User"
                       >
-                        Manager
+                          User
                       </label>
                     </div>
                   </div>

@@ -1,6 +1,6 @@
 function loadHeader() {
   var headerHTML = `<div class="brand mr-md">
-  <a href="#">Gull React</a>
+  <a href="#">Theta App</a>
   <small>v1.0.0</small>
 </div>
 <button type="button" class="sidebar-toggle btn rounded-circle btn-raised btn-raised-default btn-icon" aria-label="Close">

@@ -82,7 +82,7 @@ class TasksList extends Component {
                         placeholder="Task Name"
                     />
                   </div>
-
+                  <span className="navbar-text font-weight-semibold "></span>
                   <div className="filter-mobile">
                   <span className="navbar-text font-weight-semibold ">
                     Filter:
@@ -354,7 +354,7 @@ class TasksList extends Component {
 
                                     </Dropdown.Item>
                                     <Dropdown.Item>
-                                      <i className="i-Edit"> </i> Edit Task Details
+                                      <Link to="/tasks/edit"> <i className="i-Edit"> </i> Edit Task Details</Link>
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
                                 </Dropdown>

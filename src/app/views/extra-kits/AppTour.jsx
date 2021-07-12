@@ -10,10 +10,6 @@ class AppTour extends Component {
       {
         selector: "#customizer",
         content: "Click here to change layout, color etc"
-      },
-      {
-        selector: "#buy-gull",
-        content: "Click here to buy Gull React"
       }
     ]
   };
