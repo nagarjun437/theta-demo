@@ -1,21 +1,11 @@
 import React, { Component } from "react";
 import { Breadcrumb } from "@gull";
-import LineChart4 from "app/views/charts/echarts/LineChart4";
-import DoughnutChart from "app/views/charts/echarts/Doughnut";
-import {Accordion, Card, Dropdown, ProgressBar, Table} from "react-bootstrap";
+import {Accordion, Card, Dropdown} from "react-bootstrap";
 import ReactPaginate from "react-paginate";
-import SimpleCard from "@gull/components/cards/SimpleCard";
-import { classList } from "@utils";
 import {Link} from "react-router-dom";
-import Chart from "react-apexcharts";
 
-import {
-  bAOptions18
-} from "app/views/widgets/statisticsWidgetChartOptions";
-import ReactEcharts from "echarts-for-react";
-import {echartBasicDoughnutOption} from "../../charts/echarts/echartOptions";
 
-class Jobs extends Component {
+class JobsList extends Component {
   state = {
     notificationList: [
       {
@@ -34,17 +24,17 @@ class Jobs extends Component {
         date: "20 January, 2022            "
       },
       {
-        title: "Job Name",
+        title: "Civil Works Tender",
         text: "Job Description details",
         date: "20 January, 2022            "
       },
       {
-        title: "Job Name",
+        title: "Electrical Tender",
         text: "Job Description details",
         date: "20 January, 2022            "
       },
       {
-        title: "Job Name",
+        title: "Handover site to Contractor",
         text: "Job Description details",
         date: "20 January, 2022            "
       },
@@ -109,8 +99,8 @@ class Jobs extends Component {
         <div>
           <Breadcrumb
               routeSegments={[
-                { name: "Projects Dashboard", path: "/dashboard/project" },
-                { name: "Jobs Dashboard" }
+                { name: "Home", path: "/" },
+                { name: "Jobs List" }
               ]}
           ></Breadcrumb>
 
@@ -131,11 +121,42 @@ class Jobs extends Component {
                 <div className="navbar-collapse collapse" id="navbar-filter">
                   <div className="filter-mobile">
                   <span className="navbar-text font-weight-semibold ">
+                    Search:
+                  </span>
+                  </div>
+                  <div>
+                    <input
+                        type="text"
+                        className="form-control form-control-rounded"
+                        id="jobName"
+                        placeholder="Job Name"
+                    />
+                  </div>
+
+                  <div className="filter-mobile">
+                  <span className="navbar-text font-weight-semibold ">
                     Filter:
                   </span>
                   </div>
 
+                  {/*i-Suitcase i-Belt-3 i-Film-Video i-Network-Window*/}
                   <ul className="navbar-nav flex-wrap">
+                    <Dropdown className="nav-item mx-2">
+                      <Dropdown.Toggle
+                          as="span"
+                          className="toggle-hidden cursor-pointer"
+                      >
+                        <Link className="navbar-nav-link" to="#">
+                          <i className="i-Network-Window "> </i> By Project
+                        </Link>
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item>Show All</Dropdown.Item>
+                        <Dropdown.Divider></Dropdown.Divider>
+                        <Dropdown.Item>Project ABC</Dropdown.Item>
+                        <Dropdown.Item>Project 123</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
 
                     <Dropdown className="nav-item mx-2">
                       <Dropdown.Toggle
@@ -153,7 +174,6 @@ class Jobs extends Component {
                         <Dropdown.Item>Construction Phase</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-                    {/*i-Suitcase i-Belt-3 i-Film-Video*/}
                     <Dropdown className="nav-item mx-2">
                       <Dropdown.Toggle
                           as="span"
@@ -209,23 +229,6 @@ class Jobs extends Component {
                           className="toggle-hidden cursor-pointer"
                       >
                         <Link className="navbar-nav-link" to="#">
-                          <i className="i-Add-User "> </i> By Assigned Status
-                        </Link>
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item>Show All</Dropdown.Item>
-                        <Dropdown.Divider></Dropdown.Divider>
-                        <Dropdown.Item>Assigned</Dropdown.Item>
-                        <Dropdown.Item>Unassigned</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-
-                    <Dropdown className="nav-item mx-2">
-                      <Dropdown.Toggle
-                          as="span"
-                          className="toggle-hidden cursor-pointer"
-                      >
-                        <Link className="navbar-nav-link" to="#">
                           <i className="i-Arrow-Turn-Right "></i> By Priority
                         </Link>
                       </Dropdown.Toggle>
@@ -239,20 +242,6 @@ class Jobs extends Component {
                       </Dropdown.Menu>
                     </Dropdown>
                   </ul>
-
-                  <div className="filter-mobile">
-                  <span className="navbar-text font-weight-semibold ">
-                    Search:
-                  </span>
-                  </div>
-                  <div>
-                    <input
-                        type="text"
-                        className="form-control form-control-rounded"
-                        id="jobName"
-                        placeholder="Job Name"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -664,4 +653,4 @@ class Jobs extends Component {
   }
 }
 
-export default Jobs;
+export default JobsList;

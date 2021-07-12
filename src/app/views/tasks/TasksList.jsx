@@ -1,96 +1,35 @@
 import React, { Component } from "react";
 import { Breadcrumb } from "@gull";
-import LineChart4 from "app/views/charts/echarts/LineChart4";
-import DoughnutChart from "app/views/charts/echarts/Doughnut";
-import {Accordion, Card, Dropdown, ProgressBar, Table} from "react-bootstrap";
+import {Accordion, Card, Dropdown} from "react-bootstrap";
 import ReactPaginate from "react-paginate";
-import SimpleCard from "@gull/components/cards/SimpleCard";
-import { classList } from "@utils";
 import {Link} from "react-router-dom";
-import Chart from "react-apexcharts";
 
-import {
-  bAOptions18
-} from "app/views/widgets/statisticsWidgetChartOptions";
-import ReactEcharts from "echarts-for-react";
-import {echartBasicDoughnutOption} from "../../charts/echarts/echartOptions";
-
-class Jobs extends Component {
+class TasksList extends Component {
   state = {
     notificationList: [
       {
-        title: "Topographical Survey",
-        text: "Topographical Survey Description ",
+        title: "Verify Site",
+        text: "Verify Site Description ",
         date: "20 January, 2022"
       },
       {
-        title: "Existing Structures",
-        text: "Existing Structures Description",
+        title: "Verify Quality",
+        text: "Task Description details",
         date: "20 January, 2022            "
       },
       {
-        title: "Soils Report",
-        text: "Job Description details",
+        title: "Task Name",
+        text: "Task Description details",
         date: "20 January, 2022            "
       },
       {
-        title: "Job Name",
-        text: "Job Description details",
+        title: "Task Name",
+        text: "Task Description details",
         date: "20 January, 2022            "
       },
       {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
-        date: "20 January, 2022            "
-      },
-      {
-        title: "Job Name",
-        text: "Job Description details",
+        title: "Task Name",
+        text: "Task Description details",
         date: "20 January, 2022            "
       }
     ],
@@ -109,8 +48,8 @@ class Jobs extends Component {
         <div>
           <Breadcrumb
               routeSegments={[
-                { name: "Projects Dashboard", path: "/dashboard/project" },
-                { name: "Jobs Dashboard" }
+                { name: "Home", path: "/" },
+                { name: "Tasks List" }
               ]}
           ></Breadcrumb>
 
@@ -129,6 +68,21 @@ class Jobs extends Component {
                 </div>
 
                 <div className="navbar-collapse collapse" id="navbar-filter">
+
+                  <div className="filter-mobile">
+                  <span className="navbar-text font-weight-semibold ">
+                    Search:
+                  </span>
+                  </div>
+                  <div>
+                    <input
+                        type="text"
+                        className="form-control form-control-rounded"
+                        id="taskName"
+                        placeholder="Task Name"
+                    />
+                  </div>
+
                   <div className="filter-mobile">
                   <span className="navbar-text font-weight-semibold ">
                     Filter:
@@ -136,6 +90,23 @@ class Jobs extends Component {
                   </div>
 
                   <ul className="navbar-nav flex-wrap">
+
+                    <Dropdown className="nav-item mx-2">
+                      <Dropdown.Toggle
+                          as="span"
+                          className="toggle-hidden cursor-pointer"
+                      >
+                        <Link className="navbar-nav-link" to="#">
+                          <i className="i-Network-Window "> </i> By Project
+                        </Link>
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item>Show All</Dropdown.Item>
+                        <Dropdown.Divider></Dropdown.Divider>
+                        <Dropdown.Item>Project ABC</Dropdown.Item>
+                        <Dropdown.Item>Project 123</Dropdown.Item>
+                      </Dropdown.Menu>
+                    </Dropdown>
 
                     <Dropdown className="nav-item mx-2">
                       <Dropdown.Toggle
@@ -153,7 +124,6 @@ class Jobs extends Component {
                         <Dropdown.Item>Construction Phase</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
-                    {/*i-Suitcase i-Belt-3 i-Film-Video*/}
                     <Dropdown className="nav-item mx-2">
                       <Dropdown.Toggle
                           as="span"
@@ -187,7 +157,29 @@ class Jobs extends Component {
                           className="toggle-hidden cursor-pointer"
                       >
                         <Link className="navbar-nav-link" to="#">
-                          <i className="i-Bar-Chart-2 "></i> By Job status
+                          <i className="i-Atom "> </i> By Job
+                        </Link>
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu>
+                        <Dropdown.Item>Show All</Dropdown.Item>
+                        <Dropdown.Divider></Dropdown.Divider>
+                        <Dropdown.Item>Topographical Survey</Dropdown.Item>
+                        <Dropdown.Item>Existing Structures</Dropdown.Item>
+                        <Dropdown.Item>Soils Report</Dropdown.Item>
+                        <Dropdown.Item>Civil Works Tender</Dropdown.Item>
+                        <Dropdown.Item>Electrical Tender</Dropdown.Item>
+                        <Dropdown.Item>Handover site to Contractors</Dropdown.Item>
+
+                      </Dropdown.Menu>
+                    </Dropdown>
+
+                    <Dropdown className="nav-item mx-2">
+                      <Dropdown.Toggle
+                          as="span"
+                          className="toggle-hidden cursor-pointer"
+                      >
+                        <Link className="navbar-nav-link" to="#">
+                          <i className="i-Bar-Chart-2 "></i> By Task status
                         </Link>
                       </Dropdown.Toggle>
                       <Dropdown.Menu>
@@ -200,23 +192,6 @@ class Jobs extends Component {
                         <Dropdown.Item>Rejected</Dropdown.Item>
                         <Dropdown.Item>Invalid</Dropdown.Item>
                         <Dropdown.Item>NA</Dropdown.Item>
-                      </Dropdown.Menu>
-                    </Dropdown>
-
-                    <Dropdown className="nav-item mx-2">
-                      <Dropdown.Toggle
-                          as="span"
-                          className="toggle-hidden cursor-pointer"
-                      >
-                        <Link className="navbar-nav-link" to="#">
-                          <i className="i-Add-User "> </i> By Assigned Status
-                        </Link>
-                      </Dropdown.Toggle>
-                      <Dropdown.Menu>
-                        <Dropdown.Item>Show All</Dropdown.Item>
-                        <Dropdown.Divider></Dropdown.Divider>
-                        <Dropdown.Item>Assigned</Dropdown.Item>
-                        <Dropdown.Item>Unassigned</Dropdown.Item>
                       </Dropdown.Menu>
                     </Dropdown>
 
@@ -239,20 +214,6 @@ class Jobs extends Component {
                       </Dropdown.Menu>
                     </Dropdown>
                   </ul>
-
-                  <div className="filter-mobile">
-                  <span className="navbar-text font-weight-semibold ">
-                    Search:
-                  </span>
-                  </div>
-                  <div>
-                    <input
-                        type="text"
-                        className="form-control form-control-rounded"
-                        id="jobName"
-                        placeholder="Job Name"
-                    />
-                  </div>
                 </div>
               </div>
             </div>
@@ -273,7 +234,7 @@ class Jobs extends Component {
                               <div className="d-sm-flex align-item-sm-center flex-sm-nowrap">
                                 <div>
                                   <h6>
-                                    <Link to="/dashboard/tasks">{item.title}</Link>
+                                    <Link to="/tasks/edit">{item.title}</Link>
                                   </h6>
                                   <p className="ul-task-manager__paragraph mb-3">
                                     {item.text}
@@ -342,20 +303,23 @@ class Jobs extends Component {
                                     </Dropdown.Menu>
                                   </Dropdown>
                                   <li>
-                                    <span>Phase: &nbsp;</span><Link to="#">Design</Link>
+                                    <span>Job: &nbsp;</span><Link to="#">Job Name</Link>
                                   </li>
                                   <li>
                                     <span>Category: &nbsp;</span><Link to="#">Surveyor</Link>
+                                  </li>
+                                  <li>
+                                    <span>Phase: &nbsp;</span><Link to="#">Design</Link>
                                   </li>
                                 </ul>
                               </div>
                             </div>
 
                             <div className="card-footer d-sm-flex justify-content-sm-between align-items-sm-center">
-                        <span>
-                          Tasks Completed:
-                          <span className="font-weight-semibold">3/7</span>
-                        </span>
+                              <span>
+                                Due:
+                                <span className="font-weight-semibold">18 hours</span>
+                              </span>
 
                               <ul className="list-inline mb-0 mt-2 mt-sm-0">
                                 <Dropdown className="list-inline-item">
@@ -385,11 +349,12 @@ class Jobs extends Component {
                                   </Dropdown.Toggle>
                                   <Dropdown.Menu>
                                     <Dropdown.Item>
-                                      <i className="i-Favorite-Window"> </i> Attach
-                                      screenshot
+                                      <Link to="/tasks/upload"> <i className="i-Favorite-Window"> </i> Attach
+                                        screenshot</Link>
+
                                     </Dropdown.Item>
                                     <Dropdown.Item>
-                                      <i className="i-Edit"> </i> Edit Job Details
+                                      <i className="i-Edit"> </i> Edit Task Details
                                     </Dropdown.Item>
                                   </Dropdown.Menu>
                                 </Dropdown>
@@ -426,7 +391,7 @@ class Jobs extends Component {
                       className="cursor-pointer d-flex justify-content-between pr-3"
                       eventKey="search"
                   >
-                    <span>Search Job</span>
+                    <span>Search Task</span>
                     <span className=" dropdown-toggle"></span>
                   </Accordion.Toggle>
                   <Accordion.Collapse eventKey="search">
@@ -456,17 +421,32 @@ class Jobs extends Component {
                       <p className="card-text">Actions</p>
 
                       <div className="list-group">
+                        <Link to="/tasks/create" className="list-group-item list-group-item-action">
+                        <span className="custom-font">
+                          <i className="i-Check"> </i>
+                        </span>
+                          Create Task
+                        </Link>
+                        <Link to="#" className="list-group-item list-group-item-action">
+                          <i className="i-Edit"> </i> Edit Task List
+                        </Link>
+                      </div>
+                      <div className="mb-4"></div>
+
+                      <p className="card-text">Tasks</p>
+
+                      <div className="list-group">
                         <Link to="#" className="list-group-item list-group-item-action">
                         <span className="custom-font">
                           <i className="i-Folders"> </i>
                         </span>
-                          All Jobs
+                          All Tasks
                         </Link>
                         <Link to="#" className="list-group-item list-group-item-action ">
-                          <i className="i-Add-File"> </i> Active Jobs
+                          <i className="i-Add-File"> </i> Active Tasks
                         </Link>
                         <Link to="#" className="list-group-item list-group-item-action">
-                          <i className="i-Close-Window"> </i> Closed Jobs
+                          <i className="i-Close-Window"> </i> Closed Tasks
                         </Link>
                         <Link to="#" className="list-group-item list-group-item-action">
                           <i className="i-Administrator"> </i> Assigned To Me
@@ -496,7 +476,7 @@ class Jobs extends Component {
                       className="cursor-pointer d-flex justify-content-between pr-3"
                       eventKey="Assigners"
                   >
-                    <span>Project Admins</span>
+                    <span>Assigners</span>
                     <span className=" dropdown-toggle"></span>
                   </Accordion.Toggle>
                   <Accordion.Collapse eventKey="Assigners">
@@ -569,7 +549,6 @@ class Jobs extends Component {
                   </Accordion.Collapse>
                 </Card>
               </Accordion>
-
 
               <Accordion className="mb-3" defaultActiveKey="Completeness">
                 <Card>
@@ -664,4 +643,4 @@ class Jobs extends Component {
   }
 }
 
-export default Jobs;
+export default TasksList;

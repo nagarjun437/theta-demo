@@ -146,6 +146,19 @@ class Tasks extends Component {
                       </Dropdown.Menu>
                     </Dropdown>
                   </ul>
+                  <div className="filter-mobile">
+                  <span className="navbar-text font-weight-semibold ">
+                    Search:
+                  </span>
+                  </div>
+                  <div>
+                    <input
+                        type="text"
+                        className="form-control form-control-rounded"
+                        id="taskName"
+                        placeholder="Task Name"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -166,7 +179,7 @@ class Tasks extends Component {
                               <div className="d-sm-flex align-item-sm-center flex-sm-nowrap">
                                 <div>
                                   <h6>
-                                    <Link to="#">{item.title}</Link>
+                                    <Link to="/tasks/edit">{item.title}</Link>
                                   </h6>
                                   <p className="ul-task-manager__paragraph mb-3">
                                     {item.text}
@@ -353,7 +366,7 @@ class Tasks extends Component {
                       <p className="card-text">Actions</p>
 
                       <div className="list-group">
-                        <Link to="#" className="list-group-item list-group-item-action">
+                        <Link to="/tasks/create" className="list-group-item list-group-item-action">
                         <span className="custom-font">
                           <i className="i-Add-Window"> </i>
                         </span>

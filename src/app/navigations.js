@@ -8,8 +8,24 @@ export const navigations = [
     tooltip: "Projects Dashboard for Admin"
   },
   {
-    name: "Apps",
-    description: "Lorem ipsum dolor sit.",
+    name: "Jobs",
+    description: "Jobs Dashboard for Users",
+    type: "link",
+    icon: "i-Atom",
+    path: "/jobs/view",
+    tooltip: "Jobs Dashboard for Users"
+  },
+  {
+    name: "Tasks",
+    description: "Tasks Dashboard for Users",
+    type: "link",
+    icon: "i-Check",
+    path: "/tasks/view",
+    tooltip: "Tasks Dashboard for Users"
+  },
+  {
+    name: "Communication",
+    description: "Communication between resources",
     type: "dropDown",
     icon: "i-Computer-Secure",
 
@@ -46,8 +62,8 @@ export const navigations = [
     ]
   },
   {
-    name: "Sessions",
-    description: "Lorem ipsum dolor sit.",
+    name: "Signup",
+    description: "Login Management",
     type: "dropDown",
     icon: "nav-icon i-Administrator",
     sub: [
@@ -78,8 +94,8 @@ export const navigations = [
     ]
   },
   {
-    name: "Forms",
-    description: "Lorem ipsum dolor sit.",
+    name: "Demo Screens",
+    description: "Demo Screens",
     type: "dropDown",
     icon: "i-File-Clipboard-File--Text",
     sub: [
@@ -136,14 +152,14 @@ export const navigations = [
         name: "Rich Editor",
         path: "/forms/form-editor",
         type: "link"
+      },
+      {
+        icon: "i-Cloud-Sun",
+        description: "600+ premium icons",
+        name: "Icons",
+        path: "/icons",
+        type: "link"
       }
     ]
-  },
-  {
-    name: "Icons",
-    description: "600+ premium icons",
-    type: "link",
-    icon: "i-Cloud-Sun",
-    path: "/icons"
   }
 ];

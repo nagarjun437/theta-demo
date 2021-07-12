@@ -1,11 +1,16 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import dashboardRoutes from "./views/dashboard/dashboardRoutes";
+import jobsRoutes from "./views/jobs/jobsRoutes";
 import tasksRoutes from "./views/tasks/tasksRoutes";
-import uiKitsRoutes from "./views/ui-kits/uiKitsRoutes";
-import formsRoutes from "./views/forms/formsRoutes";
+import contactRoutes from "./views/app/contact/contactRoutes";
+import usersRoutes from "./views/users/usersRoutes";
+
 import sessionsRoutes from "./views/sessions/sessionsRoutes";
 import AuthGuard from "./auth/AuthGuard";
+
+import uiKitsRoutes from "./views/ui-kits/uiKitsRoutes";
+import formsRoutes from "./views/forms/formsRoutes";
 import widgetsRoute from "./views/widgets/widgetsRoute";
 import chartsRoute from "./views/charts/chartsRoute";
 import dataTableRoute from "./views/dataTable/dataTableRoute";
@@ -18,8 +23,6 @@ import chatRoutes from "./views/app/chat/chatRoutes";
 import calendarRoutes from "./views/app/calendar/calendarRoutes";
 import taskManagerRoutes from "./views/app/task-manager/taskManagerRoutes";
 import ecommerceRoutes from "./views/app/ecommerce/ecommerceRoutes";
-import contactRoutes from "./views/app/contact/contactRoutes";
-import usersRoutes from "./views/users/usersRoutes";
 
 const redirectRoute = [
   {
@@ -42,6 +45,7 @@ const routes = [
     component: AuthGuard,
     routes: [
       ...dashboardRoutes,
+      ...jobsRoutes,
       ...tasksRoutes,
       ...usersRoutes,
       ...uiKitsRoutes,

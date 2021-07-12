@@ -114,7 +114,6 @@ class Project extends Component {
                 </div>
 
                 <ul className="navbar-nav flex-wrap">
-
                   <Dropdown className="nav-item mx-2">
                     <Dropdown.Toggle
                         as="span"
@@ -156,6 +155,20 @@ class Project extends Component {
                     </Dropdown.Menu>
                   </Dropdown>
                 </ul>
+
+                <div className="filter-mobile">
+                  <span className="navbar-text font-weight-semibold ">
+                    Search:
+                  </span>
+                </div>
+                <div>
+                  <input
+                      type="text"
+                      className="form-control form-control-rounded"
+                      id="projectName"
+                      placeholder="Project Name"
+                  />
+                </div>
                 {/*<span className="navbar-text font-weight-semibold ">*/}
                 {/*    Search Project:*/}
                 {/*  </span>*/}
@@ -613,6 +626,12 @@ class Project extends Component {
                       </Link>
                       <Link to="#" className="list-group-item list-group-item-action">
                         <i className="i-Edit"> </i> Edit Project List
+                      </Link>
+                      <Link to="/tasks/create" className="list-group-item list-group-item-action">
+                        <span className="custom-font">
+                          <i className="i-Check"> </i>
+                        </span>
+                        Create Task
                       </Link>
                       <Link to="#" className="list-group-item list-group-item-action">
                         <i className="i-Gears"> </i> Settings

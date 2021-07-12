@@ -20,7 +20,7 @@ const SigninSchema = yup.object().shape({
 
 class Signin extends Component {
   state = {
-    email: "watson@example.com",
+    email: "arjun@theta.com",
     password: "12345678"
   };
 
