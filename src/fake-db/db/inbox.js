@@ -11,7 +11,7 @@ const inboxDB = {
       },
       date: new Date("6/25/2021"),
       selected: false,
-      subject: "Welcome to Theta App",
+      subject: "Welcome to JobDone App",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -90,7 +90,7 @@ const inboxDB = {
       },
       date: new Date("1/8/2021"),
       selected: false,
-      subject: "Welcome to Theta App",
+      subject: "Welcome to JobDone App",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 
@@ -169,7 +169,7 @@ const inboxDB = {
       },
       date: new Date("10/3/2020"),
       selected: false,
-      subject: "Welcome to Theta App",
+      subject: "Welcome to JobDone App",
       message: `<p>Natus consequuntur perspiciatis esse beatae illo quos eaque.</p>
               <p>Earum, quisquam, fugit? Numquam dolor magni nisi? Suscipit odit, ipsam iusto enim culpa, 
               temporibus vero possimus error voluptates sequi. Iusto ipsam, nihil? Eveniet modi maxime animi excepturi a dignissimos doloribus, 

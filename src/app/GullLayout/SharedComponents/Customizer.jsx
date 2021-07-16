@@ -8,6 +8,9 @@ import {
 } from "app/redux/actions/LayoutActions";
 import { classList } from "@utils";
 import ScrollBar from "react-perfect-scrollbar";
+import {Link} from "react-router-dom";
+import localStorageService from "../../services/localStorageService";
+import {authRoles} from "../../auth/authRoles";
 
 class Customizer extends Component {
   state = {};
@@ -116,135 +119,24 @@ class Customizer extends Component {
           <div className="accordion" id="accordionCustomizer">
             <div className="card">
               <div className="card-header" id="headingOne">
-                <p className="mb-0">Sidebar Layout</p>
+                <p className="mb-0">Project Actions</p>
               </div>
-
               <div
-                id="collapseOne"
-                className="collapse show"
-                aria-labelledby="headingThree"
-                data-parent="#accordionCustomizer"
-              >
-                <div className="card-body layouts">
-                  <div
-                    className={classList({
-                      "layout-box": true,
-                      active: activeLayout === "layout1"
-                    })}
-                    onClick={() => this.handleLayoutChange("layout1")}
-                  >
-                    <img
-                      src="/assets/images/screenshots/04_preview.png"
-                      alt=""
-                    />
-                    <i className="i-Eye"> </i>
-                  </div>
-                  <div
-                    className={classList({
-                      "layout-box": true,
-                      active: activeLayout === "layout2"
-                    })}
-                    onClick={() => this.handleLayoutChange("layout2")}
-                  >
-                    <img
-                      src="/assets/images/screenshots/02_preview.png"
-                      alt=""
-                    />
-                    <i className="i-Eye"> </i>
-                  </div>
-                  <div
-                      className={classList({
-                        "layout-box": true,
-                        active: activeLayout === "layout3"
-                      })}
-                      onClick={() => this.handleLayoutChange("layout3")}
-                  >
-                    <img
-                        src="/assets/images/screenshots/03_preview.png"
-                        alt=""
-                    />
-                    <i className="i-Eye"> </i>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {settings.activeLayout === "layout2" && (
-              <div className="card">
-                <div className="card-header" id="headingOne">
-                  <p className="mb-0">Sidebar Colors</p>
-                </div>
-
-                <div
-                  id="collapseOne"
+                  id="collapseTwo"
                   className="collapse show"
-                  aria-labelledby="headingOne"
+                  aria-labelledby="headingTwo"
                   data-parent="#accordionCustomizer"
-                >
-                  <div className="card-body">
-                    <div className="colors sidebar-colors">
-                      {this.sidebarColors.map((c, i) => (
-                        <span
-                          className={`color ${c.name}`}
-                          title={c.name}
-                          onClick={() =>
-                            this.changeSidebarColor(`sidebar-${c.name}`)
-                          }
-                          key={i}
-                        >
-                          <i className="i-Eye"></i>
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="card">
-              <div className="card-header" id="headingOne">
-                <p className="mb-0">RTL</p>
-              </div>
-
-              <div
-                id="collapseTwo"
-                className="collapse show"
-                aria-labelledby="headingTwo"
-                data-parent="#accordionCustomizer"
               >
                 <div className="card-body">
-                  <label className="checkbox checkbox-primary">
-                    <input
-                      type="checkbox"
-                      id="rtl-checkbox"
-                      checked={settings.dir === "rtl" ? true : false}
-                      onChange={this.handleDirectionChange}
-                    />
-                    <span>Enable RTL</span>
-                    <span className="checkmark"></span>
-                  </label>
+                  <Link to="#">
+                            <span className="custom-font">
+                              <i className="i-Network-Window"> </i>
+                            </span>
+                    Create New Project
+                  </Link>
                 </div>
               </div>
             </div>
-
-            {/* <div className="card">
-              <div className="card-header" id="headingThree">
-                <p className="mb-0">Bootstrap Colors</p>
-              </div>
-
-              <div
-                id="collapseThree"
-                className="collapse show"
-                aria-labelledby="headingThree"
-                data-parent="#accordionCustomizer"
-              >
-                <div className="card-body">
-                  <div className="bootstrap-colors colors">
-                    <span title="lite-purple" className="color purple"></span>
-                    <span title="lite-blue" className="color blue"></span>
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
         </ScrollBar>
       </div>

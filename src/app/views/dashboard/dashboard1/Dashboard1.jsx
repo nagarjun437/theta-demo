@@ -66,25 +66,25 @@ class Dashboard1 extends Component {
     newUserList: [
       {
         name: "Smith Doe",
-        email: "Smith@gmail.com",
+        email: "Smith@jobdone.com",
         status: "active",
         photoUrl: "/assets/images/faces/1.jpg"
       },
       {
         name: "Jhon Doe",
-        email: "Jhon@gmail.com",
+        email: "Jhon@jobdone.com",
         status: "pending",
         photoUrl: "/assets/images/faces/2.jpg"
       },
       {
         name: "Alex",
-        email: "Otttio@gmail.com",
+        email: "Otttio@jobdone.com",
         status: "inactive",
         photoUrl: "/assets/images/faces/3.jpg"
       },
       {
         name: "Mathew Doe",
-        email: "matheo@gmail.com",
+        email: "matheo@jobdone.com",
         status: "active",
         photoUrl: "/assets/images/faces/4.jpg"
       }

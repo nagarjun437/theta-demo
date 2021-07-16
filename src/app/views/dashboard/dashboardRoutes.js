@@ -23,7 +23,7 @@ const dashboardRoutes = [
   {
     path: "/dashboard/tasks",
     component: Tasks,
-    auth: authRoles.admin
+    auth: authRoles.user
   },
   // {
   //   path: "/tasks/upload",

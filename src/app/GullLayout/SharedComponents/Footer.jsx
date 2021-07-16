@@ -8,10 +8,10 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-9">
             <p>
-              <strong>Theta admin UI template</strong>
+              <strong>JobDone App</strong>
             </p>
             <p>
-              This is the UI template used for demo of Theta Application.
+              This is the UI template used for demo of JobDone Application.
             </p>
           </div>
         </div>

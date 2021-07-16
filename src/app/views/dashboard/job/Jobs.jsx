@@ -297,9 +297,9 @@ class Jobs extends Component {
                                         alt="corrupted 2"
                                     />
                                   </Link>
-                                  <Link to="#">
-                                    <i className="ml-1 ul-task-manager__fonts i-Add text-32 align-middle"></i>
-                                  </Link>
+                                  {/*<Link to="#">*/}
+                                  {/*  <i className="ml-1 ul-task-manager__fonts i-Add text-32 align-middle"></i>*/}
+                                  {/*</Link>*/}
                                 </div>
 
                                 <ul className="list list-unstyled mb-0 mt-3 mt-sm-0 ml-auto">
@@ -419,27 +419,6 @@ class Jobs extends Component {
             </div>
 
             <div className="col-xl-3 ">
-              <Accordion className="mb-3" defaultActiveKey="search">
-                <Card>
-                  <Accordion.Toggle
-                      as={Card.Header}
-                      className="cursor-pointer d-flex justify-content-between pr-3"
-                      eventKey="search"
-                  >
-                    <span>Search Job</span>
-                    <span className=" dropdown-toggle"></span>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="search">
-                    <div className="card-body" id="custom-toggle">
-                      <input
-                          type="text"
-                          placeholder="type  &  hit enter"
-                          className="form-control"
-                      />
-                    </div>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
 
               <Accordion className="mb-3" defaultActiveKey="navigation">
                 <Card>
@@ -488,88 +467,6 @@ class Jobs extends Component {
                   </Accordion.Collapse>
                 </Card>
               </Accordion>
-
-              <Accordion className="mb-3" defaultActiveKey="Assigners">
-                <Card>
-                  <Accordion.Toggle
-                      as={Card.Header}
-                      className="cursor-pointer d-flex justify-content-between pr-3"
-                      eventKey="Assigners"
-                  >
-                    <span>Project Admins</span>
-                    <span className=" dropdown-toggle"></span>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="Assigners">
-                    <div className="card-body" id="custom-toggle4">
-                      <ul className="media-list">
-                        <li className="media mb-2">
-                          <Link to="#" className="mr-4">
-                            <img
-                                src="../assets/images/faces/1.jpg"
-                                className="rounded-circle"
-                                width="36"
-                                alt="asd"
-                                srcSet=""
-                            />
-                          </Link>
-                          <div className="ul-task-manager__media">
-                            <Link to="#">James Alexander gull</Link>
-                            <div className="font-size-sm text-muted">
-                              Santa Ana,CA
-                            </div>
-                          </div>
-                          <div className="ml-3 align-self-center">
-                            <span className="badge badge-mark"></span>
-                          </div>
-                        </li>
-
-                        <li className="media mb-2">
-                          <Link to="#" className="mr-4">
-                            <img
-                                src="../assets/images/faces/1.jpg"
-                                className="rounded-circle"
-                                width="36"
-                                alt="asd"
-                                srcSet=""
-                            />
-                          </Link>
-                          <div className="ul-task-manager__media">
-                            <Link to="#">James Alexander</Link>
-                            <div className="font-size-sm text-muted">
-                              Santa Ana,CA
-                            </div>
-                          </div>
-                          <div className="ml-3 align-self-center">
-                            <span className="badge badge-mark "></span>
-                          </div>
-                        </li>
-
-                        <li className="media mb-2">
-                          <Link to="#" className="mr-4">
-                            <img
-                                src="../assets/images/faces/1.jpg"
-                                className="rounded-circle"
-                                width="36"
-                                alt="asd"
-                                srcSet=""
-                            />
-                          </Link>
-                          <div className="ul-task-manager__media">
-                            <Link to="#">James Alexander</Link>
-                            <div className="font-size-sm text-muted">
-                              Santa Ana,CA
-                            </div>
-                          </div>
-                          <div className="ml-3 align-self-center">
-                            <span className="badge badge-mark"></span>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
-
 
               <Accordion className="mb-3" defaultActiveKey="Completeness">
                 <Card>

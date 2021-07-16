@@ -1,3 +1,5 @@
+import {authRoles} from "./auth/authRoles";
+
 export const navigations = [
   {
     name: "Dashboard",
@@ -5,22 +7,24 @@ export const navigations = [
     type: "link",
     icon: "i-Bar-Chart",
     path: "/dashboard/project",
+    auth: authRoles.admin,
     tooltip: "Projects Dashboard for Admin"
   },
-  {
-    name: "Jobs",
-    description: "Jobs Dashboard for Users",
-    type: "link",
-    icon: "i-Atom",
-    path: "/jobs/view",
-    tooltip: "Jobs Dashboard for Users"
-  },
+  // {
+  //   name: "Jobs",
+  //   description: "Jobs Dashboard for Users",
+  //   type: "link",
+  //   icon: "i-Atom",
+  //   path: "/jobs/view",
+  //   tooltip: "Jobs Dashboard for Users"
+  // },
   {
     name: "Tasks",
     description: "Tasks Dashboard for Users",
     type: "link",
     icon: "i-Check",
     path: "/tasks/view",
+    auth: authRoles.user,
     tooltip: "Tasks Dashboard for Users"
   },
   {
@@ -28,7 +32,7 @@ export const navigations = [
     description: "Communication between resources",
     type: "dropDown",
     icon: "i-Computer-Secure",
-
+    auth: authRoles.admin,
     sub: [
       { icon: "i-Email", name: "Inbox", path: "/inbox", type: "link" },
       { icon: "i-Speach-Bubble-3", name: "Chat", path: "/chat", type: "link" },
@@ -66,6 +70,7 @@ export const navigations = [
     description: "Login Management",
     type: "dropDown",
     icon: "nav-icon i-Administrator",
+    auth: authRoles.admin,
     sub: [
       {
         icon: "i-Checked-User",
@@ -98,6 +103,7 @@ export const navigations = [
     description: "Demo Screens",
     type: "dropDown",
     icon: "i-File-Clipboard-File--Text",
+    auth: authRoles.admin,
     sub: [
       {
         icon: "i-File-Clipboard-Text--Image",

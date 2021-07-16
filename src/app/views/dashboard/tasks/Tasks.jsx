@@ -329,27 +329,6 @@ class Tasks extends Component {
             </div>
 
             <div className="col-xl-3 ">
-              <Accordion className="mb-3" defaultActiveKey="search">
-                <Card>
-                  <Accordion.Toggle
-                      as={Card.Header}
-                      className="cursor-pointer d-flex justify-content-between pr-3"
-                      eventKey="search"
-                  >
-                    <span>Search Task</span>
-                    <span className=" dropdown-toggle"></span>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="search">
-                    <div className="card-body" id="custom-toggle">
-                      <input
-                          type="text"
-                          placeholder="type  &  hit enter"
-                          className="form-control"
-                      />
-                    </div>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
 
               <Accordion className="mb-3" defaultActiveKey="navigation">
                 <Card>
@@ -409,87 +388,6 @@ class Tasks extends Component {
                           <i className="i-Gears"> </i> Settings
                         </Link>
                       </div>
-                    </div>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
-
-              <Accordion className="mb-3" defaultActiveKey="Assigners">
-                <Card>
-                  <Accordion.Toggle
-                      as={Card.Header}
-                      className="cursor-pointer d-flex justify-content-between pr-3"
-                      eventKey="Assigners"
-                  >
-                    <span>Assigners</span>
-                    <span className=" dropdown-toggle"></span>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="Assigners">
-                    <div className="card-body" id="custom-toggle4">
-                      <ul className="media-list">
-                        <li className="media mb-2">
-                          <Link to="#" className="mr-4">
-                            <img
-                                src="../assets/images/faces/1.jpg"
-                                className="rounded-circle"
-                                width="36"
-                                alt="asd"
-                                srcSet=""
-                            />
-                          </Link>
-                          <div className="ul-task-manager__media">
-                            <Link to="#">James Alexander gull</Link>
-                            <div className="font-size-sm text-muted">
-                              Santa Ana,CA
-                            </div>
-                          </div>
-                          <div className="ml-3 align-self-center">
-                            <span className="badge badge-mark"></span>
-                          </div>
-                        </li>
-
-                        <li className="media mb-2">
-                          <Link to="#" className="mr-4">
-                            <img
-                                src="../assets/images/faces/1.jpg"
-                                className="rounded-circle"
-                                width="36"
-                                alt="asd"
-                                srcSet=""
-                            />
-                          </Link>
-                          <div className="ul-task-manager__media">
-                            <Link to="#">James Alexander</Link>
-                            <div className="font-size-sm text-muted">
-                              Santa Ana,CA
-                            </div>
-                          </div>
-                          <div className="ml-3 align-self-center">
-                            <span className="badge badge-mark "></span>
-                          </div>
-                        </li>
-
-                        <li className="media mb-2">
-                          <Link to="#" className="mr-4">
-                            <img
-                                src="../assets/images/faces/1.jpg"
-                                className="rounded-circle"
-                                width="36"
-                                alt="asd"
-                                srcSet=""
-                            />
-                          </Link>
-                          <div className="ul-task-manager__media">
-                            <Link to="#">James Alexander</Link>
-                            <div className="font-size-sm text-muted">
-                              Santa Ana,CA
-                            </div>
-                          </div>
-                          <div className="ml-3 align-self-center">
-                            <span className="badge badge-mark"></span>
-                          </div>
-                        </li>
-                      </ul>
                     </div>
                   </Accordion.Collapse>
                 </Card>

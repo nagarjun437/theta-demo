@@ -11,7 +11,7 @@ const SigninSchema = yup.object().shape({
   email: yup
     .string()
     .email("Invalid email")
-    .required("email is required"),
+    .required("Email is required"),
   password: yup
     .string()
     .min(8, "Password must be 8 character long")
@@ -20,8 +20,8 @@ const SigninSchema = yup.object().shape({
 
 class Signin extends Component {
   state = {
-    email: "arjun@theta.com",
-    password: "12345678"
+    email: "admin@jobdone.com",
+    password: "Admin#1234"
   };
 
   handleChange = event => {
@@ -128,13 +128,6 @@ class Signin extends Component {
                   >
                     <i className="i-Mail-with-At-Sign"></i> Sign up with Email
                   </Link>
-
-                  <Button className="btn btn-rounded btn-outline-google btn-block btn-icon-text">
-                    <i className="i-Google-Plus"></i> Sign up with Google
-                  </Button>
-                  <Button className="btn btn-rounded btn-block btn-icon-text btn-outline-facebook">
-                    <i className="i-Facebook-2"></i> Sign up with Facebook
-                  </Button>
                 </div>
               </div>
             </div>

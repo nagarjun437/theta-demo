@@ -37,7 +37,7 @@ class SimpleAlert extends Component {
             dismissible
             onClose={this.closeCustomAlert}
           >
-            Theta App makes project management easier!
+            JobDone App makes project management easier!
           </Alert>
         )}
         {variantList.map((variant, idx) => (

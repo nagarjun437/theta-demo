@@ -6,17 +6,31 @@ class JwtAuthService {
   user = {
     userId: "1",
     role: 'ADMIN',
-    displayName: "Watson Joyce",
-    email: "watsonjoyce@gmail.com",
-    photoURL: "/assets/images/face-7.jpg",
-    age: 25,
+    displayName: "Nagarjun Reddy",
+    email: "admin@jobdone.com",
+    photoURL: "/assets/images/faces/1.jpg",
+    age: 30,
+    token: "faslkhfh423oiu4h4kj432rkj23h432u49ufjaklj423h4jkhkjh"
+  }
+
+  user1 = {
+    userId: "2",
+    role: 'USER',
+    displayName: "Ram Mohan",
+    email: "user@jobdone.com",
+    photoURL: "/assets/images/faces/2.jpg",
+    age: 30,
     token: "faslkhfh423oiu4h4kj432rkj23h432u49ufjaklj423h4jkhkjh"
   }
 
   loginWithEmailAndPassword = (email, password) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        resolve(this.user);
+        if(email == 'admin@jobdone.com'){
+          resolve(this.user);
+        } else {
+          resolve(this.user1);
+        }
       }, 1000);
     }).then(data => {
       this.setSession(data.token);

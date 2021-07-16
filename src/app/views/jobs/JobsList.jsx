@@ -408,27 +408,6 @@ class JobsList extends Component {
             </div>
 
             <div className="col-xl-3 ">
-              <Accordion className="mb-3" defaultActiveKey="search">
-                <Card>
-                  <Accordion.Toggle
-                      as={Card.Header}
-                      className="cursor-pointer d-flex justify-content-between pr-3"
-                      eventKey="search"
-                  >
-                    <span>Search Job</span>
-                    <span className=" dropdown-toggle"></span>
-                  </Accordion.Toggle>
-                  <Accordion.Collapse eventKey="search">
-                    <div className="card-body" id="custom-toggle">
-                      <input
-                          type="text"
-                          placeholder="type  &  hit enter"
-                          className="form-control"
-                      />
-                    </div>
-                  </Accordion.Collapse>
-                </Card>
-              </Accordion>
 
               <Accordion className="mb-3" defaultActiveKey="navigation">
                 <Card>

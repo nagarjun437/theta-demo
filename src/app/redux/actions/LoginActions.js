@@ -19,10 +19,15 @@ export function loginWithEmailAndPassword({ email, password }) {
       .then(user => {
         dispatch(setUserData(user));
 
-        history.push({
-          pathname: "/"
-        });
-
+        if(user.role == 'ADMIN') {
+            history.push({
+                pathname: "/dashboard/project"
+            });
+        } else {
+            history.push({
+                pathname: "/tasks/view"
+            });
+        }
         return dispatch({
           type: LOGIN_SUCCESS
         });
@@ -55,7 +60,7 @@ export function firebaseLoginEmailPassword({ email, password }) {
               userId: "1",
               role: "ADMIN",
               displayName: "Watson Joyce",
-              email: "watsonjoyce@gmail.com",
+              email: "watsonjoyce@jobdone.com",
               photoURL: "/assets/images/face-7.jpg",
               age: 25,
               token: "faslkhfh423oiu4h4kj432rkj23h432u49ufjaklj423h4jkhkjh",

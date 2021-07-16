@@ -3,6 +3,7 @@ import AppContext from "app/appContext";
 import { renderRoutes } from "react-router-config";
 
 import Layout1Sidenav from "./Layout1Sidenav";
+//import Layout2Sidenav from "../Layout2/Layout2Sidenav";
 import Footer from "../SharedComponents/Footer";
 import Layout1Header from "./Layout1Header";
 
@@ -35,7 +36,7 @@ class Layout1 extends Component {
 
     return (
       <div>
-        <div className={`app-admin-wrap layout-sidebar-large`}>
+        <div className={`app-admin-wrap layout-sidebar-large sidebar-left-secondary`}>
           <Layout1Header></Layout1Header>
           <Layout1Sidenav />
           {/* sidebar */}

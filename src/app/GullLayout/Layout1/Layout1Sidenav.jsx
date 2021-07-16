@@ -15,6 +15,7 @@ import {
 import { logoutUser } from "app/redux/actions/UserActions";
 import { withRouter } from "react-router-dom";
 import ScrollBar from "react-perfect-scrollbar";
+import localStorageService from "../../services/localStorageService";
 
 class Layout1Sidenav extends Component {
   windowListener = null;
@@ -152,39 +153,45 @@ class Layout1Sidenav extends Component {
           // id="mainsidenav"
         >
           <ul className="navigation-left">
-            {navigations.map((item, i) => (
-              <li
-                className={classList({
-                  "nav-item": true,
-                  active: this.state.selectedItem === item
-                })}
-                onMouseEnter={() => {
-                  this.onMainItemMouseEnter(item);
-                }}
-                onMouseLeave={this.onMainItemMouseLeave}
-                key={i}
-              >
-                {item.path && item.type !== "extLink" && (
-                  <NavLink className="nav-item-hold" to={item.path}>
-                    <i className={`nav-icon ${item.icon}`}></i>
-                    <span className="nav-text">{item.name}</span>
-                  </NavLink>
-                )}
-                {item.path && item.type === "extLink" && (
-                  <a className="nav-item-hold" href={item.path}>
-                    <i className={`nav-icon ${item.icon}`}></i>
-                    <span className="nav-text">{item.name}</span>
-                  </a>
-                )}
-                {!item.path && (
-                  <div className="nav-item-hold">
-                    <i className={`nav-icon ${item.icon}`}></i>
-                    <span className="nav-text">{item.name}</span>
-                  </div>
-                )}
-                <div className="triangle"></div>
-              </li>
-            ))}
+            {navigations.map((item, i) =>
+            {
+              const user = localStorageService.getItem("auth_user");
+              if(user && item.auth.includes(user.role)) {
+                return (
+                    <li
+                        className={classList({
+                          "nav-item": true,
+                          active: this.state.selectedItem === item
+                        })}
+                        onMouseEnter={() => {
+                          this.onMainItemMouseEnter(item);
+                        }}
+                        onMouseLeave={this.onMainItemMouseLeave}
+                        key={i}
+                    >
+                      {item.path && item.type !== "extLink" && (
+                          <NavLink className="nav-item-hold" to={item.path}>
+                            <i className={`nav-icon ${item.icon}`}></i>
+                            <span className="nav-text">{item.name}</span>
+                          </NavLink>
+                      )}
+                      {item.path && item.type === "extLink" && (
+                          <a className="nav-item-hold" href={item.path}>
+                            <i className={`nav-icon ${item.icon}`}></i>
+                            <span className="nav-text">{item.name}</span>
+                          </a>
+                      )}
+                      {!item.path && (
+                          <div className="nav-item-hold">
+                            <i className={`nav-icon ${item.icon}`}></i>
+                            <span className="nav-text">{item.name}</span>
+                          </div>
+                      )}
+                      <div className="triangle"></div>
+                    </li>
+                )
+              }
+            })}
           </ul>
         </Srcollbar>
 

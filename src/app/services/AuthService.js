@@ -6,7 +6,7 @@ export const signin = (data) => {
             resolve({
                 userId: "1",
                 Name: "Rosy",
-                email: "ui-lib@gmail.com",
+                email: "ui-lib@jobdone.com",
                 age: 25
             });
         }, 1000);
@@ -19,7 +19,7 @@ export const signup = (data) => {
             resolve({
                 userId: "1",
                 Name: "Rosy",
-                email: "ui-lib@gmail.com",
+                email: "ui-lib@jobdone.com",
                 age: 25
             });
         }, 1000);

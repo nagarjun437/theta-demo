@@ -28,7 +28,7 @@ const redirectRoute = [
   {
     path: "/",
     exact: true,
-    component: () => <Redirect to="/dashboard/project" />
+    component: () => <Redirect to="/session/signin" />
   }
 ];
 

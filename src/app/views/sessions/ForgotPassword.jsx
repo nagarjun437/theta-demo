@@ -16,7 +16,7 @@ const ForgotPasswordSchema = yup.object().shape({
 
 class ForgotPassword extends Component {
   state = {
-    email: "arjun@theta.com"
+    email: "arjun@jobdone.com"
   };
 
   handleChange = event => {

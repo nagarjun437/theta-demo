@@ -918,7 +918,7 @@ class AppWidget extends Component {
                     alt=""
                   />
                   <p className="m-0 text-24">Timothy Sara</p>
-                  <p className="text-muted m-0">timothysara@gmail.com</p>
+                  <p className="text-muted m-0">timothysara@jobdone.com</p>
                   <div className="mt-3 ul-widget-app__skill-margin">
                     <span className="text-15">Template</span>
                     <span className="text-15">UI</span>
