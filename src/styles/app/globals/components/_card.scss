@@ -4,6 +4,7 @@
   box-shadow: 4px 12px 13px 5px rgb(0 0 0 / 8%), 4px 5px 4px 3px rgb(0 0 0 / 8%);
   // box-shadow: 0 2px 36px -6px rgba(57,55,73,0.25);
   border: 0;
+  background: rgba($foreground, 0.05);
   &.border-top {
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1),
       inset 0 2px 0 0 $green;
@@ -12,7 +13,7 @@
 
 .card-header,
 .card-footer {
-  border-color: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.3);
 }
 .simple-card-title {
   h3 {
@@ -184,6 +185,20 @@
     display: inline-block;
     padding: 4px;
   }
+}
+
+.card-gradient {
+  position: relative;
+  background-color: white;
+  background-image: linear-gradient(rgba(102, 51, 153, 0.1), rgb(253 183 199))
+  //linear-gradient(rgba(102,51,153,.1),rgba(102,51,153,.3));
+}
+
+.card-gradient-inner {
+  position: relative;
+  background-color: white;
+  background-image: linear-gradient(rgba(102, 51, 153, 0.1), rgb(253 183 199))
+  //linear-gradient(rgba(102,51,153,.1),rgba(102,51,153,.3));
 }
 
 .card-zoom-in {
