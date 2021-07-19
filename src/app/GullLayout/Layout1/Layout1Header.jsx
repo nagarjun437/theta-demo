@@ -121,152 +121,104 @@ class Layout1Header extends Component {
   };
 
   render() {
-    let { shorcutMenuList = [], notificationList = [] } = this.state;
-    const user = localStorageService.getItem("auth_user");
-    if(user) {
-      return (
-          <div className="main-header">
-            <div className="logo" onClick={this.handleMenuClick}>
-              <img src="/assets/images/logo.png" alt="" />
-            </div>
+         let { shorcutMenuList = [], notificationList = [] } = this.state;
+         const user = localStorageService.getItem("auth_user");
+         if(user) {
+           return (
+               <div className="main-header">
+                 <div className="logo" onClick={this.handleMenuClick}>
+                   <img src="/assets/images/logo.png" alt="" />
+                 </div>
+                 <div style={{ margin: "auto" }}></div>
 
-            {/*<div className="menu-toggle" onClick={this.handleMenuClick}>*/}
-            {/*  <div></div>*/}
-            {/*  <div></div>*/}
-            {/*  <div></div>*/}
-            {/*</div>*/}
+                 <div className="header-part-right">
+                   <i
+                       className="i-Full-Screen header-icon d-none d-sm-inline-block"
+                       data-fullscreen
+                       onClick={this.toggleFullScreen}
+                   ></i>
 
-            {/*<div className="d-none d-lg-flex align-items-center">*/}
-            {/*  <Dropdown className="mr-3">*/}
-            {/*    <Dropdown.Toggle as="span" className="toggle-hidden cursor-pointer">*/}
-            {/*      Mega Menu*/}
-            {/*    </Dropdown.Toggle>*/}
+                   <Dropdown>
+                     <Dropdown.Toggle as="span" className="toggle-hidden cursor-pointer">
+                       <div
+                           className="badge-top-container"
+                           role="button"
+                           id="dropdownNotification"
+                           data-toggle="dropdown"
+                       >
+                         <span className="badge badge-primary">3</span>
+                         <i className="i-Bell text-muted header-icon"></i>
+                       </div>
+                     </Dropdown.Toggle>
 
-            {/*    <div className="mega-menu">*/}
-            {/*      <Dropdown.Menu>*/}
-            {/*        <MegaMenu></MegaMenu>*/}
-            {/*      </Dropdown.Menu>*/}
-            {/*    </div>*/}
-            {/*  </Dropdown>*/}
+                     <DropdownMenu className="notification-dropdown rtl-ps-none">
+                       {notificationList.map((note, index) => (
+                           <div key={index} className="dropdown-item d-flex">
+                             <div className="notification-icon">
+                               <i className={`${note.icon} text-${note.color} mr-1`}></i>
+                             </div>
+                             <div className="notification-details flex-grow-1">
+                               <p className="m-0 d-flex align-items-center">
+                                 <span>{note.title}</span>
+                                 <span
+                                     className={`badge badge-pill badge-${note.color} ml-1 mr-1`}
+                                 >
+                             {note.status}
+                           </span>
+                                 <span className="flex-grow-1"></span>
+                                 <span className="text-small text-muted ml-auto">
+                             {getTimeDifference(new Date(note.time))} ago
+                           </span>
+                               </p>
+                               <p className="text-small text-muted m-0">
+                                 {note.description}
+                               </p>
+                             </div>
+                           </div>
+                       ))}
+                     </DropdownMenu>
+                   </Dropdown>
 
-            {/*  <div className="search-bar">*/}
-            {/*    <input*/}
-            {/*      type="text"*/}
-            {/*      placeholder="Search"*/}
-            {/*      onFocus={this.handleSearchBoxOpen}*/}
-            {/*    />*/}
-            {/*    <i className="search-icon text-muted i-Magnifi-Glass1"></i>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
-
-            <div style={{ margin: "auto" }}></div>
-
-            <div className="header-part-right">
-              <i
-                  className="i-Full-Screen header-icon d-none d-sm-inline-block"
-                  data-fullscreen
-                  onClick={this.toggleFullScreen}
-              ></i>
-
-              {/*<Dropdown>*/}
-              {/*  <Dropdown.Toggle as="span" className="toggle-hidden">*/}
-              {/*    <i*/}
-              {/*        className="i-Safe-Box text-muted header-icon"*/}
-              {/*        role="button"*/}
-              {/*    ></i>*/}
-              {/*  </Dropdown.Toggle>*/}
-              {/*  <Dropdown.Menu>*/}
-              {/*    <div className="menu-icon-grid">*/}
-              {/*      {shorcutMenuList.map(menu => (*/}
-              {/*          <Link key={menu.text} to={menu.link}>*/}
-              {/*            <i className={menu.icon}></i> {menu.text}*/}
-              {/*          </Link>*/}
-              {/*      ))}*/}
-              {/*    </div>*/}
-              {/*  </Dropdown.Menu>*/}
-              {/*</Dropdown>*/}
-
-              <Dropdown>
-                <Dropdown.Toggle as="span" className="toggle-hidden cursor-pointer">
-                  <div
-                      className="badge-top-container"
-                      role="button"
-                      id="dropdownNotification"
-                      data-toggle="dropdown"
-                  >
-                    <span className="badge badge-primary">3</span>
-                    <i className="i-Bell text-muted header-icon"></i>
-                  </div>
-                </Dropdown.Toggle>
-
-                <DropdownMenu className="notification-dropdown rtl-ps-none">
-                  {notificationList.map((note, index) => (
-                      <div key={index} className="dropdown-item d-flex">
-                        <div className="notification-icon">
-                          <i className={`${note.icon} text-${note.color} mr-1`}></i>
-                        </div>
-                        <div className="notification-details flex-grow-1">
-                          <p className="m-0 d-flex align-items-center">
-                            <span>{note.title}</span>
-                            <span
-                                className={`badge badge-pill badge-${note.color} ml-1 mr-1`}
-                            >
-                        {note.status}
-                      </span>
-                            <span className="flex-grow-1"></span>
-                            <span className="text-small text-muted ml-auto">
-                        {getTimeDifference(new Date(note.time))} ago
-                      </span>
-                          </p>
-                          <p className="text-small text-muted m-0">
-                            {note.description}
-                          </p>
-                        </div>
-                      </div>
-                  ))}
-                </DropdownMenu>
-              </Dropdown>
-
-              <div className="user col align-self-end">
-                <Dropdown>
-                  <DropdownToggle
-                      as="span"
-                      className="toggle-hidden cursor-pointer"
-                  >
-                    <img
-                        src={localStorageService.getItem("auth_user").photoURL}
-                        id="userDropdown"
-                        alt=""
-                        data-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                    />
-                  </DropdownToggle>
-                  <DropdownMenu>
-                    <div className="dropdown-header">
-                      <i className="i-Lock-User mr-1"></i>
-                      {localStorageService.getItem("auth_user").displayName}
-                    </div>
-                    <Link to="/" className="dropdown-item cursor-pointer">
-                      Account settings
-                    </Link>
-                    <Link to="/" className="dropdown-item cursor-pointer">
-                      Billing history
-                    </Link>
-                    <Link
-                        to="/session/signin"
-                        className="dropdown-item cursor-pointer"
-                        onClick={this.props.logoutUser}
-                    >
-                      Sign out
-                    </Link>
-                  </DropdownMenu>
-                </Dropdown>
-              </div>
-            </div>
-          </div>
-      );
-    }
+                   <div className="user col align-self-end">
+                     <Dropdown>
+                       <DropdownToggle
+                           as="span"
+                           className="toggle-hidden cursor-pointer"
+                       >
+                         <img
+                             src={localStorageService.getItem("auth_user").photoURL}
+                             id="userDropdown"
+                             alt=""
+                             data-toggle="dropdown"
+                             aria-haspopup="true"
+                             aria-expanded="false"
+                         />
+                       </DropdownToggle>
+                       <DropdownMenu>
+                         <div className="dropdown-header">
+                           <i className="i-Lock-User mr-1"></i>
+                           {localStorageService.getItem("auth_user").displayName}
+                         </div>
+                         <Link to="/" className="dropdown-item cursor-pointer">
+                           Account settings
+                         </Link>
+                         <Link to="/" className="dropdown-item cursor-pointer">
+                           Billing history
+                         </Link>
+                         <Link
+                             to="/session/signin"
+                             className="dropdown-item cursor-pointer"
+                             onClick={this.props.logoutUser}
+                         >
+                           Sign out
+                         </Link>
+                       </DropdownMenu>
+                     </Dropdown>
+                   </div>
+                 </div>
+               </div>
+           );
+         }
 
 
   }

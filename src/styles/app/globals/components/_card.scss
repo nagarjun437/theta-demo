@@ -197,7 +197,17 @@
 .card-gradient-inner {
   position: relative;
   background-color: white;
-  background-image: linear-gradient(rgba(102, 51, 153, 0.1), rgb(253 183 199))
+  background-image: radial-gradient(rgba(232, 134, 157, 0.5), rgba(250, 90, 60, 0.8))
+  //linear-gradient(rgba(102,51,153,.1),rgba(102,51,153,.3));
+}
+
+//radial-gradient(rgb(0 0 0 / 4%), rgb(102 51 153 / 70%))
+//radial-gradient(rgb(23 130 150 / 60%), rgb(100 50 150 / 70%))
+//radial-gradient(rgb(232 134 157 / 60%), rgb(102 51 153 / 80%))
+.card-gradient-inner-1 {
+  position: relative;
+  background-color: white;
+  background-image: radial-gradient(rgb(23 130 150 / 60%), rgb(100 50 150 / 70%))
   //linear-gradient(rgba(102,51,153,.1),rgba(102,51,153,.3));
 }
 

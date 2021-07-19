@@ -36,10 +36,7 @@ class Signin extends Component {
   render() {
     return (
       <div
-        className="auth-layout-wrap"
-        style={{
-          backgroundImage: "url(/assets/images/photo-wide-4.jpg)"
-        }}
+        className="auth-layout-wrap card-gradient-inner-1"
       >
         <div className="auth-content">
           <div className="card o-hidden">

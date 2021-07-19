@@ -229,7 +229,7 @@ class TasksList extends Component {
                     )
                     .map((item, ind) => (
                         <div key={ind} className="col-xl-6">
-                          <div className="card mb-4">
+                          <div className="card mb-4 card-gradient-inner-1">
                             <div className="card-body">
                               <div className="d-sm-flex align-item-sm-center flex-sm-nowrap">
                                 <div>

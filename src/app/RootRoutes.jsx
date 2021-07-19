@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 import dashboardRoutes from "./views/dashboard/dashboardRoutes";
+import projectRoutes from "./views/project/projectRoutes"
 import jobsRoutes from "./views/jobs/jobsRoutes";
 import tasksRoutes from "./views/tasks/tasksRoutes";
 import contactRoutes from "./views/app/contact/contactRoutes";
@@ -45,6 +46,7 @@ const routes = [
     component: AuthGuard,
     routes: [
       ...dashboardRoutes,
+      ...projectRoutes,
       ...jobsRoutes,
       ...tasksRoutes,
       ...usersRoutes,

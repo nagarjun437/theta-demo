@@ -211,14 +211,14 @@ class Project extends Component {
           <div className="col-xl-12">
             <div className="row">
               <div className="col-xl-6">
-                <div className="card mb-4">
+                <div className="card mb-4 card-gradient-inner">
                   <div className="card-body">
                     <h5 className="card-title">Project ABC</h5>
                     <div className="row">
                       {cardList.map((card, index) => (
                           <div key={index} className="col-md-3">
                             <Link to="/dashboard/jobs/#">
-                              <div className="card card-zoom-in card-gradient card-icon-big mb-4">
+                              <div className="card card-zoom-in card-icon-big mb-4">
                                 <div className="card-body text-center">
                                     <i className={card.icon}></i>
                                     <p className="text-muted mt-2 mb-0 text-capitalize">
@@ -234,7 +234,7 @@ class Project extends Component {
                       ))}
 
                       <div className="col-md-3">
-                        <div className="card mb-4 card-gradient">
+                        <div className="card mb-4 card-zoom-in">
                           <div className="card-body">
                             <h6 className="mb-2 text-muted">Jobs Status</h6>
                             <p className="mb-1 text-22 font-weight-light">40%</p>
@@ -251,7 +251,7 @@ class Project extends Component {
                       </div>
 
                       <div className="col-md-3">
-                        <div className="card mb-4 card-gradient">
+                        <div className="card mb-4 card-zoom-in">
                           <div className="card-body">
                             <h6 className="mb-2 text-muted">Tasks Status</h6>
                             <p className="mb-1 text-22 font-weight-light">60%</p>
@@ -388,7 +388,7 @@ class Project extends Component {
           <div className="col-xl-12">
             <div className="row">
               <div className="col-xl-6">
-                <div className="card mb-4">
+                <div className="card mb-4 card-gradient-inner-1">
                   <div className="card-body">
                     <h5 className="card-title">Project Name 2</h5>
                     <div className="row">
@@ -411,7 +411,7 @@ class Project extends Component {
                       ))}
 
                       <div className="col-md-3">
-                        <div className="card mb-4 card-gradient">
+                        <div className="card mb-4 card-gradient card-zoom-in">
                           <div className="card-body">
                             <h6 className="mb-2 text-muted">Jobs Status</h6>
                             <p className="mb-1 text-22 font-weight-light">40%</p>
@@ -428,7 +428,7 @@ class Project extends Component {
                       </div>
 
                       <div className="col-md-3">
-                        <div className="card mb-4 card-gradient">
+                        <div className="card mb-4 card-gradient card-zoom-in">
                           <div className="card-body">
                             <h6 className="mb-2 text-muted">Tasks Status</h6>
                             <p className="mb-1 text-22 font-weight-light">60%</p>
@@ -472,14 +472,14 @@ class Project extends Component {
               </div>
 
               <div className="col-xl-6">
-                <div className="card mb-4">
+                <div className="card mb-4 card-gradient-inner-1">
                   <div className="card-body">
                     <h5 className="card-title">Project Name 3</h5>
                     <div className="row">
                       {cardList.map((card, index) => (
                           <div key={index} className="col-md-3">
                             <Link to="/dashboard/jobs/#">
-                              <div className="card card-icon-big mb-4 card-zoom-in card-gradient">
+                              <div className="card card-icon-big mb-4 card-zoom-in">
                                 <div className="card-body text-center">
                                   <i className={card.icon}></i>
                                   <p className="text-muted mt-2 mb-0 text-capitalize">
@@ -495,7 +495,7 @@ class Project extends Component {
                       ))}
 
                       <div className="col-md-3">
-                        <div className="card mb-4 card-gradient">
+                        <div className="card mb-4 card-zoom-in">
                           <div className="card-body">
                             <h6 className="mb-2 text-muted">Jobs Status</h6>
                             <p className="mb-1 text-22 font-weight-light">40%</p>
@@ -512,7 +512,7 @@ class Project extends Component {
                       </div>
 
                       <div className="col-md-3">
-                        <div className="card mb-4 card-gradient">
+                        <div className="card mb-4 card-zoom-in">
                           <div className="card-body">
                             <h6 className="mb-2 text-muted">Tasks Status</h6>
                             <p className="mb-1 text-22 font-weight-light">60%</p>

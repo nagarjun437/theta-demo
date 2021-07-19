@@ -11,6 +11,7 @@ import ScrollBar from "react-perfect-scrollbar";
 import {Link} from "react-router-dom";
 import localStorageService from "../../services/localStorageService";
 import {authRoles} from "../../auth/authRoles";
+import {Accordion, Button, Card, Dropdown, OverlayTrigger, ProgressBar, Table, Tooltip} from "react-bootstrap";
 
 class Customizer extends Component {
   state = {};
@@ -127,13 +128,17 @@ class Customizer extends Component {
                   aria-labelledby="headingTwo"
                   data-parent="#accordionCustomizer"
               >
-                <div className="card-body">
-                  <Link to="#">
-                            <span className="custom-font">
-                              <i className="i-Network-Window"> </i>
-                            </span>
-                    Create New Project
-                  </Link>
+                <div>
+                   <Dropdown.Item>
+                    <Link to="/project/create"><i className="i-Network-Window" > </i> Create New Project </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link to="/tasks/create"><i className="i-Check" > </i> Create New Task </Link>
+                  </Dropdown.Item>
+                  <Dropdown.Item>
+                    <Link to="#"><i className="i-Paint-Brush" > </i> Actions</Link>
+                  </Dropdown.Item>
+
                 </div>
               </div>
             </div>

@@ -32,7 +32,7 @@ export const navigations = [
     description: "Communication between resources",
     type: "dropDown",
     icon: "i-Computer-Secure",
-    auth: authRoles.admin,
+    auth: authRoles.user,
     sub: [
       { icon: "i-Email", name: "Inbox", path: "/inbox", type: "link" },
       { icon: "i-Speach-Bubble-3", name: "Chat", path: "/chat", type: "link" },
@@ -70,7 +70,7 @@ export const navigations = [
     description: "Login Management",
     type: "dropDown",
     icon: "nav-icon i-Administrator",
-    auth: authRoles.admin,
+    auth: authRoles.user,
     sub: [
       {
         icon: "i-Checked-User",
