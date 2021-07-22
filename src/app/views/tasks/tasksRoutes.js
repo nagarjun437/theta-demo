@@ -30,7 +30,12 @@ const tasksRoutes = [
     path: "/tasks/edit",
     component: ViewEditTask,
     auth: authRoles.user
-  }
+  },
+ {
+   path: "/tasks/viewTask",
+   component: ViewEditTask,
+   auth: authRoles.user
+ }
 ];
 
 export default tasksRoutes;

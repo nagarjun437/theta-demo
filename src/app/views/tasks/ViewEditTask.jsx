@@ -5,6 +5,7 @@ import {classList} from "../../../@utils";
 import * as yup from "yup";
 import DateTime from "react-datetime";
 import UploadFileForm from "./UploadFileForm";
+import GalleryView from "./GalleryView";
 
 class ViewEditTask extends Component {
   state = {
@@ -55,66 +56,37 @@ class ViewEditTask extends Component {
                   <div className="row">
                     <div className="col-md-6 form-group mb-3">
                       <label htmlFor="firstName2">Task name</label>
-                      <input
-                          type="text"
-                          className="form-control form-control-rounded"
-                          id="firstName2"
-                          placeholder="Enter your first name"
-                      />
+                      <h1 className="text-16">Task Name</h1>
                     </div>
 
                     <div className="col-md-6 form-group mb-3">
-                      <label htmlFor="lastName2">Task Description name</label>
-                      <input
-                          type="text"
-                          className="form-control form-control-rounded"
-                          id="lastName2"
-                          placeholder="Enter your last name"
-                      />
+                      <label htmlFor="lastName2">Task Description   </label>
+                      <h1 className="text-16">Task Description</h1>
                     </div>
 
                     <div className="col-md-6 form-group mb-3">
                       <label htmlFor="picker3">Due date</label>
-                      <DateTime className="form-control-rounded" />
+                      <h1 className="text-16">23-08-2021</h1>
                     </div>
 
                     <div className="col-md-6 form-group mb-3">
                       <label htmlFor="phone1">Phase</label>
-                      <select className="form-control form-control-rounded">
-                        <option>Design Phase</option>
-                        <option>Construction Phase</option>
-                      </select>
+                      <h1 className="text-16">Design Phase</h1>
                     </div>
 
                     <div className="col-md-6 form-group mb-3">
                       <label htmlFor="phone1">Category</label>
-                      <select className="form-control form-control-rounded">
-                        <option>Topographical Survey</option>
-                        <option>Existing Structures</option>
-                        <option>Soils Report</option>
-                      </select>
+                      <h1 className="text-16">Topographical Survey</h1>
                     </div>
 
                     <div className="col-md-6 form-group mb-3">
                       <label htmlFor="phone1">Job</label>
-                      <select className="form-control form-control-rounded">
-                        <option>Topographical Survey</option>
-                        <option>Existing Structures</option>
-                        <option>Soils Report</option>
-                      </select>
+                      <h1 className="text-16">Existing Structures</h1>
                     </div>
 
                     <div className="col-md-6 form-group mb-3">
                       <label htmlFor="website2">Content URL</label>
-                      <input
-                          className="form-control form-control-rounded"
-                          id="website2"
-                          placeholder="Web address"
-                      />
-                    </div>
-
-                    <div className="col-md-12">
-                      <button className="btn btn-primary">Create Task</button>
+                      <h1 className="text-16">https://jobdone-ui.netlify.app/</h1>
                     </div>
                   </div>
                 </form>
@@ -122,480 +94,17 @@ class ViewEditTask extends Component {
             </div>
           </div>
         </div>
-
         <div className="row">
           <div className="col-md-12">
-            <UploadFileForm/>
+            <div className="card"><GalleryView/></div>
           </div>
         </div>
 
         <div className="row">
           <div className="col-md-12">
-            <div className="card mb-4">
-              <div className="card-body">
-                <Formik
-                    initialValues={this.state}
-                    validationSchema={basicFormSchema1}
-                    onSubmit={this.handleSubmit}
-                >
-                  {({
-                      values,
-                      errors,
-                      touched,
-                      handleChange,
-                      handleBlur,
-                      handleSubmit,
-                      isSubmitting
-                    }) => {
-                    return (
-                        <form
-                            className="needs-validation"
-                            onSubmit={handleSubmit}
-                            noValidate
-                        >
-                          <div className="form-row">
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field":
-                                      !errors.firstName && touched.firstName,
-                                  "invalid-field":
-                                      errors.firstName && touched.firstName
-                                })}
-                            >
-                              <label htmlFor="validationCustom202">
-                                Task Name
-                              </label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom202"
-                                  placeholder="Task Name"
-                                  name="firstName"
-                                  value={values.firstName}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="valid-feedback">Looks good!</div>
-                              <div className="invalid-feedback">
-                                Task Name is required
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field":
-                                      touched.lastName && !errors.lastName,
-                                  "invalid-field":
-                                      touched.lastName && errors.lastName
-                                })}
-                            >
-                              <label htmlFor="validationCustom222">
-                                Task Description
-                              </label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom222"
-                                  placeholder="Task Description"
-                                  value={values.lastName}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  name="lastName"
-                                  required
-                              />
-                              <div className="valid-feedback">Looks good!</div>
-                              <div className="invalid-feedback">
-                                Task Description is required
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field":
-                                      touched.username && !errors.username,
-                                  "invalid-field":
-                                      touched.username && errors.username
-                                })}
-                            >
-                              <label htmlFor="validationCustomUsername">
-                                Username
-                              </label>
-                              <div className="input-group">
-                                <div className="input-group-prepend">
-                                <span
-                                    className="input-group-text"
-                                    id="inputGroupPrepend"
-                                >
-                                  @
-                                </span>
-                                </div>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="validationCustomUsername"
-                                    placeholder="Username"
-                                    aria-describedby="inputGroupPrepend"
-                                    name="username"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.username}
-                                    required
-                                />
-                                <div className="invalid-feedback">
-                                  Please choose a username.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="form-row">
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field": touched.city && !errors.city,
-                                  "invalid-field": touched.city && errors.city
-                                })}
-                            >
-                              <label htmlFor="validationCustom03">City</label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom03"
-                                  placeholder="City"
-                                  name="city"
-                                  value={values.city}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="invalid-feedback">
-                                Please provide a valid city.
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field": touched.state && !errors.state,
-                                  "invalid-field": touched.state && errors.state
-                                })}
-                            >
-                              <label htmlFor="validationCustom204">State</label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom204"
-                                  placeholder="State"
-                                  name="state"
-                                  value={values.state}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="invalid-feedback">
-                                Please provide a valid state.
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field": touched.zip && !errors.zip,
-                                  "invalid-field": touched.zip && errors.zip
-                                })}
-                            >
-                              <label htmlFor="validationCustom05">Zip</label>
-                              <input
-                                  type="number"
-                                  className="form-control"
-                                  id="validationCustom05"
-                                  placeholder="Zip"
-                                  name="zip"
-                                  value={values.zip}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="invalid-feedback">
-                                Please provide a valid zip.
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                              className={classList({
-                                "col-md-4 mb-3": true,
-                                "valid-field":
-                                    touched.agree &&
-                                    !errors.agree &&
-                                    values.agree.length,
-                                "invalid-field":
-                                    touched.agree &&
-                                    errors.agree &&
-                                    !values.agree.length
-                              })}
-                          >
-                            <label className="checkbox checkbox-primary">
-                              <input
-                                  type="checkbox"
-                                  name="agree"
-                                  value={values.agree}
-                                  checked={values.agree.length}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <span>Agree to terms and conditions</span>
-                              <span className="checkmark"></span>
-                            </label>
-
-                            <div className="invalid-feedback">
-                              You must agree before submitting.
-                            </div>
-                          </div>
-                          <button className="btn btn-primary" type="submit">
-                            Submit form
-                          </button>
-                        </form>
-                    );
-                  }}
-                </Formik>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-12">
-            <div className="card">
-              <div className="card-body">
-                <div className="card-title">Tooltip message</div>
-                <Formik
-                    initialValues={this.state}
-                    validationSchema={basicFormSchema}
-                    onSubmit={this.handleSubmit}
-                >
-                  {({
-                      values,
-                      errors,
-                      touched,
-                      handleChange,
-                      handleBlur,
-                      handleSubmit,
-                      isSubmitting
-                    }) => {
-                    return (
-                        <form
-                            className="needs-validation"
-                            onSubmit={handleSubmit}
-                            noValidate
-                        >
-                          <div className="form-row">
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field":
-                                      !errors.firstName && touched.firstName,
-                                  "invalid-field":
-                                      errors.firstName && touched.firstName
-                                })}
-                            >
-                              <label htmlFor="validationCustom01">
-                                First name
-                              </label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom01"
-                                  placeholder="First name"
-                                  name="firstName"
-                                  value={values.firstName}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="valid-tooltip">Looks good!</div>
-                              <div className="invalid-tooltip">
-                                First name is required
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field":
-                                      touched.lastName && !errors.lastName,
-                                  "invalid-field":
-                                      touched.lastName && errors.lastName
-                                })}
-                            >
-                              <label htmlFor="validationCustom02">
-                                Last name
-                              </label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom02"
-                                  placeholder="Last name"
-                                  value={values.lastName}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  name="lastName"
-                                  required
-                              />
-                              <div className="valid-tooltip">Looks good!</div>
-                              <div className="invalid-tooltip">
-                                Last name is required
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field":
-                                      touched.username && !errors.username,
-                                  "invalid-field":
-                                      touched.username && errors.username
-                                })}
-                            >
-                              <label htmlFor="validationCustomUsername1">
-                                Username
-                              </label>
-                              <div className="input-group">
-                                <div className="input-group-prepend">
-                                <span
-                                    className="input-group-text"
-                                    id="inputGroupPrepend"
-                                >
-                                  @
-                                </span>
-                                </div>
-                                <input
-                                    type="text"
-                                    className="form-control"
-                                    id="validationCustomUsername1"
-                                    placeholder="Username"
-                                    aria-describedby="inputGroupPrepend"
-                                    name="username"
-                                    onChange={handleChange}
-                                    onBlur={handleBlur}
-                                    value={values.username}
-                                    required
-                                />
-                                <div className="invalid-tooltip">
-                                  Please choose a username.
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="form-row">
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field": touched.city && !errors.city,
-                                  "invalid-field": touched.city && errors.city
-                                })}
-                            >
-                              <label htmlFor="validationCustom203">City</label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom203"
-                                  placeholder="City"
-                                  name="city"
-                                  value={values.city}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="invalid-tooltip">
-                                Please provide a valid city.
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field": touched.state && !errors.state,
-                                  "invalid-field": touched.state && errors.state
-                                })}
-                            >
-                              <label htmlFor="validationCustom04">State</label>
-                              <input
-                                  type="text"
-                                  className="form-control"
-                                  id="validationCustom04"
-                                  placeholder="State"
-                                  name="state"
-                                  value={values.state}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="invalid-tooltip">
-                                Please provide a valid state.
-                              </div>
-                            </div>
-                            <div
-                                className={classList({
-                                  "col-md-4 mb-3": true,
-                                  "valid-field": touched.zip && !errors.zip,
-                                  "invalid-field": touched.zip && errors.zip
-                                })}
-                            >
-                              <label htmlFor="validationCustom205">Zip</label>
-                              <input
-                                  type="number"
-                                  className="form-control"
-                                  id="validationCustom205"
-                                  placeholder="Zip"
-                                  name="zip"
-                                  value={values.zip}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <div className="invalid-tooltip">
-                                Please provide a valid zip.
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                              className={classList({
-                                "col-md-4 mb-3": true,
-                                "valid-field":
-                                    touched.agree &&
-                                    !errors.agree &&
-                                    values.agree.length,
-                                "invalid-field":
-                                    touched.agree &&
-                                    errors.agree &&
-                                    !values.agree.length
-                              })}
-                          >
-                            <label className="checkbox checkbox-primary">
-                              <input
-                                  type="checkbox"
-                                  name="agree"
-                                  value={values.agree}
-                                  checked={values.agree.length}
-                                  onChange={handleChange}
-                                  onBlur={handleBlur}
-                                  required
-                              />
-                              <span>Agree to terms and conditions</span>
-                              <span className="checkmark"></span>
-                            </label>
-
-                            <div className="invalid-tooltip">
-                              You must agree before submitting.
-                            </div>
-                          </div>
-                          <button className="btn btn-primary" type="submit">
-                            Submit form
-                          </button>
-                        </form>
-                    );
-                  }}
-                </Formik>
-              </div>
-            </div>
+              <div className="card"><UploadFileForm/></div>
           </div>
         </div>
-
 
       </div>
     );
