@@ -282,7 +282,10 @@ class Project extends Component {
                             <Link to="/users/list"><i className="mx-1 i-Business-Mens" > </i></Link> Manage Users
                           </Dropdown.Item>
                           <Dropdown.Item>
-                            <Link to="#"><i className="mx-1 i-Edit" > </i></Link> Edit Project
+                            <Link to="/project/view"><i className="mx-1 i-Network-Window" > </i></Link> View Project
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <Link to="/project/create"><i className="mx-1 i-Edit" > </i></Link> Edit Project
                           </Dropdown.Item>
                           <Dropdown.Item>
                             <Link to="#"><i className="mx-1 i-Paint-Brush" > </i></Link> Remove Project
@@ -367,7 +370,10 @@ class Project extends Component {
                               <Link to="/users/list"><i className="mx-1 i-Business-Mens" > </i></Link> Manage Users
                             </Dropdown.Item>
                             <Dropdown.Item>
-                              <Link to="#"><i className="mx-1 i-Edit" > </i></Link> Edit Project
+                              <Link to="/project/view"><i className="mx-1 i-Network-Window" > </i></Link> View Project
+                            </Dropdown.Item>
+                            <Dropdown.Item>
+                              <Link to="/project/create"><i className="mx-1 i-Edit" > </i></Link> Edit Project
                             </Dropdown.Item>
                             <Dropdown.Item>
                               <Link to="#"><i className="mx-1 i-Paint-Brush" > </i></Link> Remove Project
@@ -459,7 +465,10 @@ class Project extends Component {
                             <Link to="/users/list"><i className="mx-1 i-Business-Mens" > </i></Link> Manage Users
                           </Dropdown.Item>
                           <Dropdown.Item>
-                            <Link to="#"><i className="mx-1 i-Edit" > </i></Link> Edit Project
+                            <Link to="/project/view"><i className="mx-1 i-Network-Window" > </i></Link> View Project
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <Link to="/project/create"><i className="mx-1 i-Edit" > </i></Link> Edit Project
                           </Dropdown.Item>
                           <Dropdown.Item>
                             <Link to="#"><i className="mx-1 i-Paint-Brush" > </i></Link> Remove Project
@@ -544,7 +553,10 @@ class Project extends Component {
                             <Link to="/users/list"><i className="mx-1 i-Business-Mens" > </i></Link> Manage Users
                           </Dropdown.Item>
                           <Dropdown.Item>
-                            <Link to="#"><i className="mx-1 i-Edit" > </i></Link> Edit Project
+                            <Link to="/project/view"><i className="mx-1 i-Network-Window" > </i></Link> View Project
+                          </Dropdown.Item>
+                          <Dropdown.Item>
+                            <Link to="/project/create"><i className="mx-1 i-Edit" > </i></Link> Edit Project
                           </Dropdown.Item>
                           <Dropdown.Item>
                             <Link to="#"><i className="mx-1 i-Paint-Brush" > </i></Link> Remove Project
